@@ -215,7 +215,7 @@
           
           if ("empfang" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(EmpfangsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Empfang? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(EmpfangsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Empfang? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(EmpfangsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Empfang? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(EmpfangsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Empfang? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Empfang") { 
@@ -227,7 +227,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(EmpfangsBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'empfang');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'empfang');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'empfang');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'empfang');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'empfang');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'empfang');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'empfang');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'empfang');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'empfang');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'empfang');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(EmpfangsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'empfang');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -253,11 +253,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(EmpfangsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(EmpfangsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(EmpfangsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(EmpfangsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(EmpfangsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'empfang');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(EmpfangsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'empfang');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'empfang');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'empfang');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'empfang');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'empfang');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'empfang');}          
        // -----------------
        // Über uns
        // -----------------
@@ -274,15 +274,15 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(EmpfangsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(EmpfangsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(EmpfangsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(EmpfangsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(EmpfangsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
        // Stile
@@ -325,22 +325,13 @@
        // System
        // -----------------
           
-          if (~befehl.indexOf("--BEFEHLE")) { versuch = true; return bot.say(EmpfangsBot+' Sprechen Sie mit meinen Kolleginnen: --Beratung, --Strategie, --Konzeption, --Kreation und --Technik. ').then(() => bot.say(EmpfangsBot+' Weitere Funktionen: --Kontakt, --Newsletter, --Mobil und --Über. ')).then(() => 'empfang');}          
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(EmpfangsBot+' Ich bin Alice, der Empfangs-Bot. ').then(() => bot.say(KreationsBot+' Alice ist eine offene Person, die Besucher auf ihre hilfsbereite Art in Empfang nimmt. ')).then(() => bot.say(EmpfangsBot+' Ich leite weiter zu unseren Gewerken und übernehme einfache Aufgaben, wie z.B. Ihren --Namen zu erfassen. ')).then(() => 'empfang');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(EmpfangsBot+' Ich bin Alice, der Empfangs-Bot. ').then(() => bot.say(KreationsBot+' Alice ist eine offene Person, die Besucher auf ihre hilfsbereite Art in Empfang nimmt. ')).then(() => bot.say(EmpfangsBot+' Ich leite weiter zu unseren Gewerken und übernehme einfache Aufgaben, wie z.B. Ihren --Namen zu erfassen. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(EmpfangsBot+' Sprechen Sie mit meinen Kolleginnen: --Beratung, --Strategie, --Konzeption, --Kreation und --Technik. ').then(() => bot.say(EmpfangsBot+' Weitere Funktionen: --Kontakt, --Newsletter, --Mobil und --Über. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(EmpfangsBot+' Ich bin Alice, der Empfangs-Bot. ').then(() => bot.say(KreationsBot+' Alice ist eine offene Person, die Besucher auf ihre hilfsbereite Art in Empfang nimmt. ')).then(() => bot.say(EmpfangsBot+' Ich leite weiter zu unseren Gewerken und übernehme einfache Aufgaben, wie z.B. Ihren --Namen zu erfassen. ')).then(() => 'empfang');}          
        // -----------------
-       // Inhalte
-       // -----------------
-          
-       // Folgen..?
-          
-       // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
        
-       // Einzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(EmpfangsBot+' Text Empfang 1. ').then(() => 'empfang');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(EmpfangsBot+' Text Empfang 1. ').then(() => bot.say(EmpfangsBot+' Text Empfang 2. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(EmpfangsBot+' Text Vorlage 1. ').then(() => 'empfang');}          
 
        // -----------------
        // Bot aus
@@ -405,7 +396,7 @@
           
           if ("beratung" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(BeratungsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Beratung? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(BeratungsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Beratung? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(BeratungsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Beratung? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(BeratungsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Beratung? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Beratung") { 
@@ -417,7 +408,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(BeratungsBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'beratung');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'beratung');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'beratung');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'beratung');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'beratung');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'beratung');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'beratung');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'beratung');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'beratung');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'beratung');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'beratung');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -443,11 +434,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(BeratungsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(BeratungsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(BeratungsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(BeratungsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(BeratungsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'beratung');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(BeratungsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'beratung');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(BeratungsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'beratung');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'beratung');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'beratung');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'beratung');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'beratung');}          
        // -----------------
        // Über uns
        // -----------------
@@ -464,17 +455,17 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'beratung');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(BeratungsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(BeratungsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(BeratungsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(BeratungsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
-          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(BeratungsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(BeratungsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(BeratungsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(BeratungsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'beratung');}          
        // Stile
           if (~befehl.indexOf("--TAG")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:stil(tag)] Stil: Tag. ').then(() => 'beratung');}          if (~befehl.indexOf("--NACHT")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:stil(nacht)] Stil: Nacht. ').then(() => 'beratung');}          if (~befehl.indexOf("--ROBOS")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:stil(robogeddon)] Stil: Robogeddon. ').then(() => 'beratung');}          if (~befehl.indexOf("--HX")) { versuch = true; return bot.say(BeratungsBot+' [Javascript:stil(hacks)] Stil: Hx. ').then(() => 'beratung');}          
        // -----------------
@@ -482,8 +473,8 @@
        // -----------------
           
           if (zuletzt_klein != "sefzig") { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(BeratungsBot+' Sprechen Sie solange mit mir, indem Sie --Beratung schreiben! ')).then(() => 'empfang');} } else { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(BeratungsBot+' Sprechen Sie solange mit mir, indem Sie --Beratung schreiben! ')).then(() => 'empfang');}          }
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(BeratungsBot+' Sprechen Sie solange mit mir, indem Sie --Beratung schreiben! ')).then(() => 'beratung');} } else { 
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(BeratungsBot+' Sprechen Sie solange mit mir, indem Sie --Beratung schreiben! ')).then(() => 'beratung');}          }
           
           if (zuletzt_klein != "empfang") { 
              if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(BeratungsBot+' Ich übergebe an Alice. Schreiben Sie --Beratung, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(BeratungsBot+' Ich übergebe an Alice. Schreiben Sie --Beratung, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');} } else { 
@@ -516,7 +507,7 @@
        // -----------------
           
           if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(BeratungsBot+' Befehle der --Beratung: --Lösungen, --Leistungen, --Kalkulation und --Slack. ').then(() => 'beratung');}          
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(BeratungsBot+' Ich bin Barbara, Beratungs-Bot ').then(() => bot.say(StrategieBot+' Barbara gibt sich ein wenig trocken, weiß aber über alles Bescheid. Wir sind gut miteinander abgestimmt! ')).then(() => bot.say(BeratungsBot+' Ich habe den Überblick über alle unsere --Produkte. Zudem habe ich Spaß daran, Fortschritte zu dokumentieren - wie z.B. in unserer --Slack -Serie. ')).then(() => bot.say(BeratungsBot+' Zurück zur --Beratung? ')).then(() => 'beratung');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(BeratungsBot+' Ich bin Barbara, Beratungs-Bot ').then(() => bot.say(StrategieBot+' Barbara gibt sich ein wenig trocken, weiß aber über alles Bescheid. Wir sind gut miteinander abgestimmt! ')).then(() => bot.say(BeratungsBot+' Ich habe den Überblick über alle unsere --Produkte. Zudem habe ich Spaß daran, Fortschritte zu dokumentieren - wie z.B. in unserer --Slack -Serie. ')).then(() => bot.say(BeratungsBot+' Zurück zur --Beratung? ')).then(() => 'beratung');}          
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(BeratungsBot+' Ich bin Barbara, Beratungs-Bot. ').then(() => bot.say(StrategieBot+' Barbara gibt sich ein wenig trocken, weiß aber über alles Bescheid. Wir sind gut miteinander abgestimmt! ')).then(() => bot.say(BeratungsBot+' Ich habe den Überblick über alle unsere --Produkte. Zudem habe ich Spaß daran, Fortschritte zu dokumentieren - wie z.B. in unserer --Slack -Serie. ')).then(() => bot.say(BeratungsBot+' Zurück zur --Beratung? ')).then(() => 'beratung');}          
        // -----------------
        // Leistungen
        // -----------------
@@ -524,12 +515,12 @@
           if (~befehl.indexOf("--LEISTUNG")) { versuch = true; return bot.say(BeratungsBot+' Andreas kann Sie in Sachen Chatbots --beraten. Er kann sicherlich auch operativ an Ihrem Projekt --mitarbeiten. ').then(() => bot.say(BeratungsBot+' Nutzen Sie seine Erfahrung bei der --Einführung von Chats und Chat-Bots! Nach Bedarf bringt er unsere bestehenden --Lösungen kostenlos mit ein. ')).then(() => bot.say(BeratungsBot+' Kein Interesse? Dann lassen Sie zurück zur --Beratung gehen. ')).then(() => 'beratung');}	       
           if (~befehl.indexOf("--MITARBEIT")) { versuch = true; return bot.say(BeratungsBot+' Gerne leihen wir Ihnen Andreas als vorübergehenden Mitarbeiter aus :)  ').then(() => bot.say(BeratungsBot+' Greifen Sie auf unsere Expertise in Strategie, Konzeption und Technologie zurück! Hier finden Sie Konditionen und Details: [Text:Robogeddon Beratung,RobogeddonBeratung] ')).then(() => bot.say(BeratungsBot+' Oder wollen Sie mit mir über unsere anderen --Leistungen sprechen? ')).then(() => 'beratung');}	       
           if (~befehl.indexOf("--BERATE")) { versuch = true; return bot.say(BeratungsBot+' Gerne begleiten wir Sie auf Ihrem Weg ins Robogeddon :D ').then(() => bot.say(BeratungsBot+' Hier finden Sie Konditionen und Details: [Text:Robogeddon Beratung,RobogeddonBeratung] ')).then(() => bot.say(BeratungsBot+' Oder sprechen Sie mit mir über unsere anderen --Leistungen. ')).then(() => 'beratung');}	       
-          if (~befehl.indexOf("--EINFÜHR")) { versuch = true; return bot.say(BeratungsBot+' Sie wollen Ihre interne Kommunikation auf Chat umstellen? Ein kluger Zug! ').then(() => bot.say(BeratungsBot+' Dann sollten Sie uns ansprechen: Wir haben nicht nur Erfahrung mit ChatOps und kennen die kulturellen Stolpersteine - wir haben auch eine Reihe praktischer --Lösungen entwickelt, mit denen Sie Ihre Mitarbeiter elegant ins Thema holen! ')).then(() => bot.say(BeratungsBot+' Oder lassen Sie mich Ihnen unsere anderen --Leistungen zeigen. ')).then(() => 'beratung');}if (~befehl.indexOf("--EINFUHR")) { versuch = true; return bot.say(BeratungsBot+' Sie wollen Ihre interne Kommunikation auf Chat umstellen? Ein kluger Zug! ').then(() => bot.say(BeratungsBot+' Dann sollten Sie uns ansprechen: Wir haben nicht nur Erfahrung mit ChatOps und kennen die kulturellen Stolpersteine - wir haben auch eine Reihe praktischer --Lösungen entwickelt, mit denen Sie Ihre Mitarbeiter elegant ins Thema holen! ')).then(() => bot.say(BeratungsBot+' Oder lassen Sie mich Ihnen unsere anderen --Leistungen zeigen. ')).then(() => 'beratung');}	       
+          if (~befehl.indexOf("--EINFÜHR")) { versuch = true; return bot.say(BeratungsBot+' Sie wollen Ihre interne Kommunikation auf Chat umstellen? Ein kluger Zug! ').then(() => bot.say(BeratungsBot+' Dann sollten Sie uns ansprechen: Wir haben nicht nur Erfahrung mit ChatOps und kennen die kulturellen Stolpersteine - wir haben auch eine Reihe praktischer --Lösungen entwickelt, mit denen Sie Ihre Mitarbeiter elegant ins Thema holen! ')).then(() => bot.say(BeratungsBot+' Oder lassen Sie mich Ihnen unsere anderen --Leistungen zeigen. ')).then(() => 'beratung');}	       
        // -----------------
        // Lösungen
        // -----------------
           
-          if (~befehl.indexOf("--LÖSUNG")) { versuch = true; return bot.say(BeratungsBot+' Wir entwickeln elegante Chat-Lösungen für die externe wie interne Kommunikation. Unser Flagschiff ist der #Robogeddon --Chatraum für extern. Für intern bieten wir verschiedene Werkzeuge, die --ChatOps einfach machen. ').then(() => bot.say(BeratungsBot+' Unsere bereits entwickelten Lösungen stehen Ihnen als Teil unserer --Leistungen sogar kostenlos zur Verfügung! ')).then(() => bot.say(BeratungsBot+' Oder wollen wir zurück zur --Beratung gehen? ')).then(() => 'beratung');}if (~befehl.indexOf("--LOSUNG")) { versuch = true; return bot.say(BeratungsBot+' Wir entwickeln elegante Chat-Lösungen für die externe wie interne Kommunikation. Unser Flagschiff ist der #Robogeddon --Chatraum für extern. Für intern bieten wir verschiedene Werkzeuge, die --ChatOps einfach machen. ').then(() => bot.say(BeratungsBot+' Unsere bereits entwickelten Lösungen stehen Ihnen als Teil unserer --Leistungen sogar kostenlos zur Verfügung! ')).then(() => bot.say(BeratungsBot+' Oder wollen wir zurück zur --Beratung gehen? ')).then(() => 'beratung');}	       
+          if (~befehl.indexOf("--LÖSUNG")) { versuch = true; return bot.say(BeratungsBot+' Wir entwickeln elegante Chat-Lösungen für die externe wie interne Kommunikation. Unser Flagschiff ist der #Robogeddon --Chatraum für extern. Für intern bieten wir verschiedene Werkzeuge, die --ChatOps einfach machen. ').then(() => bot.say(BeratungsBot+' Unsere bereits entwickelten Lösungen stehen Ihnen als Teil unserer --Leistungen sogar kostenlos zur Verfügung! ')).then(() => bot.say(BeratungsBot+' Oder wollen wir zurück zur --Beratung gehen? ')).then(() => 'beratung');}	       
           if (~befehl.indexOf("--CHATRAUM")) { versuch = true; return bot.say(BeratungsBot+' Sie befinden sich gerade in einem #Robogeddon-Chatraum! Die Lösung ist perfekt für die 1-zu-1-Kommunikation mit einzelnen Personen. ').then(() => bot.say(BeratungsBot+' Webseite, Content und CRM in einem: [Text:Produktbeschreibung,RobogeddonChatraum,falten3] ')).then(() => bot.say(BeratungsBot+' Oder wollen wir über die anderen --Lösungen sprechen? ')).then(() => 'beratung');}	       
           if (~befehl.indexOf("--CHATOP")) { versuch = true; return bot.say(BeratungsBot+' Mit den Prinzipien der ChatOps - z.B. auf Basis von --Slack - steuern und beschleunigen Sie die Kommunikation in Ihrem Team immens. Unsere Lösungen geben Ihrem Team den Zugriff auf Ihre Daten, erlauben das Steuern Ihrer Marketing-Technologien aus dem Chat heraus und ermöglichen Ihnen die Readktions-Planung für interne Inhalte. ').then(() => bot.say(BeratungsBot+' Die Datenverarbeitung im Chat geschieht über --Bots. Die interne Kommunikation läuft über eine Vorlage unseres --Redaktionsplans. ')).then(() => bot.say(BeratungsBot+' Oder wollen Sie zu den anderen --Lösungen? ')).then(() => 'beratung');}	       
           if (~befehl.indexOf("--BOT")) { versuch = true; return bot.say(BeratungsBot+' Wir entwickeln Bots für alle möglichen Plattformen. B2C sind dies u.a. Facebook, Telegram, Whatsapp, SMS und natürlich das Internet. Intern leben unsere Bots u.a. in Slack und Hipchat. Ex- und -intern lassen sich übrigens verknüpfen. ').then(() => bot.say(BeratungsBot+' Mehr über interne Bots: [Text:Bots für ChatOps,RobogeddonBotsIntern] ')).then(() => bot.say(BeratungsBot+' Welches Chat-System nutzen Sie? Oder wollen Sie zu --ChatOps zurückkehren? ')).then(() => 'beratung');}	       
@@ -538,24 +529,21 @@
        // Slack
        // -----------------
           
+          if (~befehl.indexOf("--SLACK")) { versuch = true; return bot.say(BeratungsBot+' Ich möchte Ihnen unsere Inhalte zu Slack ans Herz legen: Unser --Blogpost zeigt die Einfachheit der Anwendung. Ein --Artikel zeigt die Bedeutung für Marketer. Öffnen Sie unsere --Linklisten oder treten Sie unserem offenen --Team bei. ').then(() => bot.say(BeratungsBot+' Oder zurück zur --Beratung? ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--ARTIKEL")) { versuch = true; return bot.say(BeratungsBot+' Andreas hat einen fundierten Artikel zu --Slack geschrieben: Was müssen Marketer über Slack wissen? [Text:Artikel: Slack,RobogeddonSlackArtikel] ').then(() => bot.say(BeratungsBot+' Mehr zu --Slack oder --Beratung? ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--BLOGPOST")) { versuch = true; return bot.say(BeratungsBot+' Lesen Sie auch unseren Blogpost zu --Slack: Was ist Slack und wie nutzt man es? [Text:Blogpost: Slack,SefzignetBlogSlack] ').then(() => bot.say(BeratungsBot+' Mehr zu --Slack oder --Beratung? ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--LINKLISTEN")) { versuch = true; return bot.say(BeratungsBot+' Wir haben uns viele wichtige Artikel zu --Slack gemerkt: [Linkliste:Linkliste Slack-Artikel,Slack:Artikel] ').then(() => bot.say(BeratungsBot+' Mehr zu --Slack oder --Beratung? ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--TEAM")) { versuch = true; return bot.say(BeratungsBot+' Treten Sie unserem offenen --Slack Team  bei, um sich mit uns auszutauschen: [Button:Anmeldung,http://sefzig.net/link/SlackAnmeldung/] ').then(() => bot.say(BeratungsBot+' Mehr zu --Slack oder --Beratung? ')).then(() => 'beratung');}          
-          if (~befehl.indexOf("--SLACK")) { versuch = true; return bot.say(BeratungsBot+' Ich möchte Ihnen unsere Inhalte zu Slack ans Herz legen: Unser --Blogpost zeigt die Einfachheit der Anwendung. Ein --Artikel zeigt die Bedeutung für Marketer. Öffnen Sie unsere --Linklisten oder treten Sie unserem offenen --Team bei. ').then(() => bot.say(BeratungsBot+' Oder zurück zur --Beratung? ')).then(() => 'beratung');}          
        // -----------------
        // Kalkulation
        // -----------------
           
           if (~befehl.indexOf("--KALKUL")) { versuch = true; return bot.say(BeratungsBot+' Diese Funktion wird gerade entwickelt - bitte kommen Sie wieder! Zurück zur --Beratung. ').then(() => 'beratung');}          
        // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
        
-       // Einzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(BeratungsBot+' Text Beratung 1. ').then(() => 'beratung');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(BeratungsBot+' Text Beratung 1. ').then(() => bot.say(BeratungsBot+' Text Beratung 2. ')).then(() => 'beratung');}          
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(BeratungsBot+' Text Vorlage 1. ').then(() => 'beratung');}          
 
        // -----------------
        // Bot aus
@@ -620,7 +608,7 @@
           
           if ("technik" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(TechnikBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Technik? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(TechnikBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Technik? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(TechnikBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Technik? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(TechnikBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Technik? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Technik") { 
@@ -632,7 +620,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(TechnikBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'technik');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'technik');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'technik');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'technik');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'technik');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'technik');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'technik');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'technik');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'technik');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'technik');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(TechnikBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'technik');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -658,11 +646,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(TechnikBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(TechnikBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(TechnikBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(TechnikBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(TechnikBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'technik');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(TechnikBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'technik');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(TechnikBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'technik');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(TechnikBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'technik');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(TechnikBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'technik');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(TechnikBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'technik');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(TechnikBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'technik');}          
        // -----------------
        // Über uns
        // -----------------
@@ -679,17 +667,17 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'technik');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(TechnikBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(TechnikBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(TechnikBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(TechnikBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
-          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(TechnikBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(TechnikBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(TechnikBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(TechnikBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'technik');}          
        // Stile
           if (~befehl.indexOf("--TAG")) { versuch = true; return bot.say(TechnikBot+' [Javascript:stil(tag)] Stil: Tag. ').then(() => 'technik');}          if (~befehl.indexOf("--NACHT")) { versuch = true; return bot.say(TechnikBot+' [Javascript:stil(nacht)] Stil: Nacht. ').then(() => 'technik');}          if (~befehl.indexOf("--ROBOS")) { versuch = true; return bot.say(TechnikBot+' [Javascript:stil(robogeddon)] Stil: Robogeddon. ').then(() => 'technik');}          if (~befehl.indexOf("--HX")) { versuch = true; return bot.say(TechnikBot+' [Javascript:stil(hacks)] Stil: Hx. ').then(() => 'technik');}          
        // -----------------
@@ -697,8 +685,8 @@
        // -----------------
           
           if (zuletzt_klein != "sefzig") { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(TechnikBot+' Sprechen Sie solange mit mir, indem Sie --Technik schreiben! ')).then(() => 'empfang');} } else { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(TechnikBot+' Sprechen Sie solange mit mir, indem Sie --Technik schreiben! ')).then(() => 'empfang');}          }
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(TechnikBot+' Sprechen Sie solange mit mir, indem Sie --Technik schreiben! ')).then(() => 'technik');} } else { 
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(TechnikBot+' Sprechen Sie solange mit mir, indem Sie --Technik schreiben! ')).then(() => 'technik');}          }
           
           if (zuletzt_klein != "empfang") { 
              if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(TechnikBot+' Ich übergebe an Alice. Schreiben Sie --Technik, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(TechnikBot+' Ich übergebe an Alice. Schreiben Sie --Technik, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');} } else { 
@@ -730,18 +718,14 @@
        // System
        // -----------------
           
-          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(TechnikBot+' Ich bin gerade sehr beschäftigt - daher kann ich Ihnen noch nicht allzuviel zeigen. ').then(() => bot.say(TechnikBot+' Aber wir können ein paar --technische --Tests durchlaufen. ')).then(() => 'technik');}          
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(TechnikBot+' Ich bin Cynthia. Ich bin die --Technik. ').then(() => bot.say(KonzeptionsBot+' Cynthia ist ein wenig schräg drauf und meist gestresst - aber sie ist eine hervorragende Entwicklerin! Für sie gibt es den Hacker-Modus: --StilHx. ')).then(() => bot.say(TechnikBot+' Ich programmiere und --teste ständig neue Funktionen und Templates, mit denen --Kreation und --Konzeption arbeiten. Ganz schön viel zu tun hier! ')).then(() => 'technik');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(TechnikBot+' Ich bin Cynthia. Ich bin die --Technik. ').then(() => bot.say(KonzeptionsBot+' Cynthia ist ein wenig schräg drauf und meist gestresst - aber sie ist eine hervorragende Entwicklerin! Für sie gibt es den Hacker-Modus: --StilHx. ')).then(() => bot.say(TechnikBot+' Ich programmiere und --teste ständig neue Funktionen und Templates, mit denen --Kreation und --Konzeption arbeiten. Ganz schön viel zu tun hier! ')).then(() => 'technik');}          
+          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(TechnikBot+' Ich bin gerade sehr beschäftigt - daher kann ich Ihnen noch nicht allzuviel zeigen. ').then(() => bot.say(TechnikBot+' Aber Sie könnten mir kurz beim --Testen helfen! ')).then(() => 'technik');}          
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(TechnikBot+' Ich bin Cynthia. Ich bin die --Technik. ').then(() => bot.say(KonzeptionsBot+' Cynthia ist ein wenig schräg drauf und meist gestresst - aber sie ist eine hervorragende Entwicklerin! Für sie gibt es den Hacker-Modus: --StilHx. ')).then(() => bot.say(TechnikBot+' Ich programmiere und --teste ständig neue Techniken und Formate, mit denen --Kreation und --Konzeption arbeiten. Ganz schön viel zu tun hier! ')).then(() => 'technik');}          
        // -----------------
        // Tests
        // -----------------
           
-          if (~befehl.indexOf("--INHALTE")) { versuch = true; return bot.say(TechnikBot+' Inhaltliche --Techniken: --Text, --Bild, --Qr und --Youtube. ').then(() => 'technik');}          
-          if (~befehl.indexOf("--LINKS")) { versuch = true; return bot.say(TechnikBot+' --Techniken für Links: --Link, --Textlink, --Linkliste, --Button, --Action, --Email und --Telefon. ').then(() => 'technik');}          
-          if (~befehl.indexOf("--STILE")) { versuch = true; return bot.say(TechnikBot+' Stil-basierte --Techniken: --StilTag, --StilNacht, --StilRobo und --StilHx. ').then(() => 'technik');}          
-          if (~befehl.indexOf("--MENÜS")) { versuch = true; return bot.say(TechnikBot+' Client-basierte --Techniken: --Menue, --MenuAn und --MenuAus. ').then(() => 'technik');}if (~befehl.indexOf("--MENUS")) { versuch = true; return bot.say(TechnikBot+' Client-basierte --Techniken: --Menue, --MenuAn und --MenuAus. ').then(() => 'technik');}          
-          if (~befehl.indexOf("--JAVASCRIPT")) { versuch = true; return bot.say(TechnikBot+' Javascript-basierte --Techniken: --Alert, --Konsole und --Cookie. ').then(() => 'technik');}          
-          if (~befehl.indexOf("--TEST")) { versuch = true; return bot.say(TechnikBot+' Wir entwickeln ständig neue --Techniken. Aktuell im Test: --Inhalte, --Links, --Stile, --Menüs und --Javascript. ').then(() => 'technik');}          
+       // Gruppen
+          if (~befehl.indexOf("--TEST")) { versuch = true; return bot.say(TechnikBot+' Wir entwickeln ständig neue --Techniken. Aktuell im Test: --Inhalte, --Links, --Stile, --Menüs und --Javascript. ').then(() => 'technik');}          if (~befehl.indexOf("--INHALTE")) { versuch = true; return bot.say(TechnikBot+' Inhalte --testen: --Text, --Bild, --Qr und --Youtube. ').then(() => 'technik');}          if (~befehl.indexOf("--LINKS")) { versuch = true; return bot.say(TechnikBot+' Links --testen: --Link, --Textlink, --Linkliste, --Button, --Action, --Email und --Telefon. ').then(() => 'technik');}          if (~befehl.indexOf("--STILE")) { versuch = true; return bot.say(TechnikBot+' Stile --testen: --StilTag, --StilNacht, --StilRobo und --StilHx. ').then(() => 'technik');}          if (~befehl.indexOf("--MENÜS")) { versuch = true; return bot.say(TechnikBot+' Menü --testen: --Menue, --MenuAn und --MenuAus. ').then(() => 'technik');}          if (~befehl.indexOf("--JAVASCRIPT")) { versuch = true; return bot.say(TechnikBot+' Javascript --testen: --Alert, --Konsole und --Cookie. ').then(() => 'technik');}          
        // Inhalte
           if (~befehl.indexOf("--TEXT")) { versuch = true; return bot.say(TechnikBot+' [Text:Slack-Blogpost öffnen,SefzignetBlogSlack] Ein Text. ').then(() => bot.say(TechnikBot+' Mehr --Inhalte, --Tests, --Technik? ')).then(() => 'technik');}          if (~befehl.indexOf("--BILD")) { versuch = true; return bot.say(TechnikBot+' [Bild:http://sefzig.net/text/seiten/SefzigBot/dateien/Mesaging_vs_Social.png] Ein Bild. ').then(() => bot.say(TechnikBot+' Mehr --Inhalte, --Tests, --Technik? ')).then(() => 'technik');}          if (~befehl.indexOf("--QR")) { versuch = true; return bot.say(TechnikBot+' [Qr:http://sefzigbot.herokuapp.com/] Ein QR-Code. ').then(() => bot.say(TechnikBot+' Mehr --Inhalte, --Tests, --Technik? ')).then(() => 'technik');}          if (~befehl.indexOf("--YOUTUBE")) { versuch = true; return bot.say(TechnikBot+' [Youtube:u07XONlDwX8] Ein Youtube-Video. ').then(() => bot.say(TechnikBot+' Mehr --Inhalte, --Tests, --Technik? ')).then(() => 'technik');}          
        // Links
@@ -753,13 +737,10 @@
        // Javascript
           if (~befehl.indexOf("--ALERT")) { versuch = true; return bot.say(TechnikBot+' [Javascript:alert(123)] Javascript-Alert ausgegeben: 123. ').then(() => bot.say(TechnikBot+' Mehr --Javascript, --Tests, --Technik? ')).then(() => 'technik');}          if (~befehl.indexOf("--KONSOLE")) { versuch = true; return bot.say(TechnikBot+' [Javascript:konsole(123)] In Konsole geschrieben: 123. ').then(() => bot.say(TechnikBot+' Mehr --Javascript, --Tests, --Technik? ')).then(() => 'technik');}          if (~befehl.indexOf("--COOKIE")) { versuch = true; return bot.say(TechnikBot+' [Javascript:cookies(test,123)] Cookie gesetzt: text, 123. ').then(() => bot.say(TechnikBot+' Mehr --Javascript, --Tests, --Technik? ')).then(() => 'technik');}          
        // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
-          
-       // Einzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(TechnikBot+' Text Technik 1. ').then(() => 'technik');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(TechnikBot+' Text Technik 1. ').then(() => bot.say(TechnikBot+' Text Technik 2. ')).then(() => 'technik');}          
+       
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(TechnikBot+' Text Vorlage 1. ').then(() => 'technik');}          
 
        // -----------------
        // Bot aus
@@ -824,7 +805,7 @@
           
           if ("kreation" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(KreationsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Kreation? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(KreationsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Kreation? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(KreationsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Kreation? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(KreationsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Kreation? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Kreation") { 
@@ -836,7 +817,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(KreationsBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'kreation');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'kreation');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'kreation');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'kreation');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'kreation');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'kreation');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'kreation');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'kreation');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'kreation');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'kreation');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(KreationsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'kreation');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -862,11 +843,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KreationsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KreationsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KreationsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KreationsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(KreationsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'kreation');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KreationsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'kreation');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KreationsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'kreation');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(KreationsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'kreation');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KreationsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'kreation');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KreationsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'kreation');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KreationsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'kreation');}          
        // -----------------
        // Über uns
        // -----------------
@@ -883,17 +864,17 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'kreation');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KreationsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KreationsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KreationsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(KreationsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
-          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KreationsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KreationsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KreationsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KreationsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'kreation');}          
        // Stile
           if (~befehl.indexOf("--TAG")) { versuch = true; return bot.say(KreationsBot+' [Javascript:stil(tag)] Stil: Tag. ').then(() => 'kreation');}          if (~befehl.indexOf("--NACHT")) { versuch = true; return bot.say(KreationsBot+' [Javascript:stil(nacht)] Stil: Nacht. ').then(() => 'kreation');}          if (~befehl.indexOf("--ROBOS")) { versuch = true; return bot.say(KreationsBot+' [Javascript:stil(robogeddon)] Stil: Robogeddon. ').then(() => 'kreation');}          if (~befehl.indexOf("--HX")) { versuch = true; return bot.say(KreationsBot+' [Javascript:stil(hacks)] Stil: Hx. ').then(() => 'kreation');}          
        // -----------------
@@ -901,8 +882,8 @@
        // -----------------
           
           if (zuletzt_klein != "sefzig") { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(KreationsBot+' Sprechen Sie solange mit mir, indem Sie --Kreation schreiben! ')).then(() => 'empfang');} } else { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(KreationsBot+' Sprechen Sie solange mit mir, indem Sie --Kreation schreiben! ')).then(() => 'empfang');}          }
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(KreationsBot+' Sprechen Sie solange mit mir, indem Sie --Kreation schreiben! ')).then(() => 'kreation');} } else { 
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(KreationsBot+' Sprechen Sie solange mit mir, indem Sie --Kreation schreiben! ')).then(() => 'kreation');}          }
           
           if (zuletzt_klein != "empfang") { 
              if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(KreationsBot+' Ich übergebe an Alice. Schreiben Sie --Kreation, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(KreationsBot+' Ich übergebe an Alice. Schreiben Sie --Kreation, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');} } else { 
@@ -934,8 +915,8 @@
        // System
        // -----------------
        
-          if (~befehl.indexOf("--BEFEHLE")) { versuch = true; return bot.say(KreationsBot+' Kreation Befehle: --Uber, --Dialoge, --Persönlichkeit, --Geschichten, --Leben, --Inhalte, --Mehrwerte. ').then(() => 'kreation');}if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(KreationsBot+' Kreation Befehle: --Uber, --Dialoge, --Persönlichkeit, --Geschichten, --Leben, --Inhalte, --Mehrwerte. ').then(() => 'kreation');}          
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(KreationsBot+' Hier in der Kreation hauchen wir den Bots --Leben ein, indem wir die --Dialoge menschlich und direkt formulieren. ').then(() => bot.say(TechnikBot+' Doris meint immer, allem --Geschichte und --Persönlichkeit geben zu müssen. Dabei geht es doch nur um --Inhalte und deren --Formate! ')).then(() => bot.say(KreationsBot+' Letztendlich geht es aber nur um eines: --Mehrwerte für die Nutzer! ')).then(() => 'kreation');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(KreationsBot+' Hier in der Kreation hauchen wir den Bots --Leben ein, indem wir die --Dialoge menschlich und direkt formulieren. ').then(() => bot.say(TechnikBot+' Doris meint immer, allem --Geschichte und --Persönlichkeit geben zu müssen. Dabei geht es doch nur um --Inhalte und deren --Formate! ')).then(() => bot.say(KreationsBot+' Letztendlich geht es aber nur um eines: --Mehrwerte für die Nutzer! ')).then(() => 'kreation');}          
+          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(KreationsBot+' Kreation Befehle: --Uber, --Dialoge, --Persönlichkeit, --Geschichten, --Leben, --Inhalte, --Mehrwerte. ').then(() => 'kreation');}          
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(KreationsBot+' Hier in der Kreation hauchen wir den Bots --Leben ein, indem wir die --Dialoge menschlich und direkt formulieren. ').then(() => bot.say(TechnikBot+' Doris meint immer, allem --Geschichte und --Persönlichkeit geben zu müssen. Dabei geht es doch nur um --Inhalte und deren --Formate! ')).then(() => bot.say(KreationsBot+' Letztendlich geht es aber nur um eines: --Mehrwerte für die Nutzer! ')).then(() => 'kreation');}          
        // -----------------
        // Leben
        // -----------------
@@ -962,13 +943,10 @@
           if (~befehl.indexOf("--WIDGET")) { versuch = true; return bot.say(KreationsBot+' Mittels Iframe binden wir externe Web-Elemente ein: [Iframe:http://sefzig.net/text/RobogeddonExtern/#einbindung] ').then(() => bot.say(KreationsBot+' Zurück zu --Formate? ')).then(() => 'kreation');}          
           if (~befehl.indexOf("--ELEMENT")) { versuch = true; return bot.say(KreationsBot+' Mit Javascript kann ich Ihren Browser ansprechen - daher kam der Javascript-Alert. [Javascript:alert(Der Bot hat Ihren Browser angesprochen.)] So ähnlich binden wir reichhaltige Daten und Funktionen aus anderen Quellen ein! ').then(() => bot.say(KreationsBot+' Zum Beispiel einen Text: [Text:RobogeddonDoku] Oder einen externen Link: [Link:Thin Media,ThinMedia] Oder eine ganze Linkliste: [Linkliste:Links zu Strategie-Artikeln,Rtm:Strategie:Artikel] ')).then(() => bot.say(KreationsBot+' Zurück zu --Formate? ')).then(() => 'kreation');}          
        // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
        
-       // Einzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(KreationsBot+' Text Kreation 1. ').then(() => 'kreation');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(KreationsBot+' Text Kreation 1. ').then(() => bot.say(KreationsBot+' Text Kreation 2. ')).then(() => 'kreation');}          
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(KreationsBot+' Text Vorlage 1. ').then(() => 'kreation');}          
 
        // -----------------
        // Bot aus
@@ -1033,7 +1011,7 @@
           
           if ("konzeption" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(KonzeptionsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Konzeption? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(KonzeptionsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Konzeption? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(KonzeptionsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Konzeption? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(KonzeptionsBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Konzeption? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Konzeption") { 
@@ -1045,7 +1023,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(KonzeptionsBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'konzeption');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'konzeption');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'konzeption');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'konzeption');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'konzeption');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'konzeption');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'konzeption');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'konzeption');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'konzeption');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'konzeption');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'konzeption');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -1071,11 +1049,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KonzeptionsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KonzeptionsBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KonzeptionsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KonzeptionsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(KonzeptionsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'konzeption');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'konzeption');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'konzeption');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'konzeption');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'konzeption');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'konzeption');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'konzeption');}          
        // -----------------
        // Über uns
        // -----------------
@@ -1092,17 +1070,17 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'konzeption');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(KonzeptionsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
-          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KonzeptionsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KonzeptionsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KonzeptionsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KonzeptionsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'konzeption');}          
        // Stile
           if (~befehl.indexOf("--TAG")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:stil(tag)] Stil: Tag. ').then(() => 'konzeption');}          if (~befehl.indexOf("--NACHT")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:stil(nacht)] Stil: Nacht. ').then(() => 'konzeption');}          if (~befehl.indexOf("--ROBOS")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:stil(robogeddon)] Stil: Robogeddon. ').then(() => 'konzeption');}          if (~befehl.indexOf("--HX")) { versuch = true; return bot.say(KonzeptionsBot+' [Javascript:stil(hacks)] Stil: Hx. ').then(() => 'konzeption');}          
        // -----------------
@@ -1110,8 +1088,8 @@
        // -----------------
           
           if (zuletzt_klein != "sefzig") { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(KonzeptionsBot+' Sprechen Sie solange mit mir, indem Sie --Konzeption schreiben! ')).then(() => 'empfang');} } else { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(KonzeptionsBot+' Sprechen Sie solange mit mir, indem Sie --Konzeption schreiben! ')).then(() => 'empfang');}          }
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(KonzeptionsBot+' Sprechen Sie solange mit mir, indem Sie --Konzeption schreiben! ')).then(() => 'konzeption');} } else { 
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(KonzeptionsBot+' Sprechen Sie solange mit mir, indem Sie --Konzeption schreiben! ')).then(() => 'konzeption');}          }
           
           if (zuletzt_klein != "empfang") { 
              if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(KonzeptionsBot+' Ich übergebe an Alice. Schreiben Sie --Konzeption, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(KonzeptionsBot+' Ich übergebe an Alice. Schreiben Sie --Konzeption, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');} } else { 
@@ -1143,8 +1121,8 @@
        // System
        // -----------------
        
-          if (~befehl.indexOf("--BEFEHLE")) { versuch = true; return bot.say(KonzeptionsBot+' Befehle der --Konzeption: --Nutzung und --Kanäle. ').then(() => bot.say(KonzeptionsBot+' --Nutzen eines Chats: --Chat, --Plattformen. ')).then(() => bot.say(KonzeptionsBot+' --Plattformen: --Slack, --Hipchat, --Smooch, --Facebook und --Web. ')).then(() => 'konzeption');}if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(KonzeptionsBot+' Befehle der --Konzeption: --Nutzung und --Kanäle. ').then(() => bot.say(KonzeptionsBot+' --Nutzen eines Chats: --Chat, --Plattformen. ')).then(() => bot.say(KonzeptionsBot+' --Plattformen: --Slack, --Hipchat, --Smooch, --Facebook und --Web. ')).then(() => 'konzeption');}
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(KonzeptionsBot+' Ich bin Erika, Konzeptions-Bot. ').then(() => bot.say(BeratungsBot+' 90% der Fehler werden in den ersten 10% des Projekts gemacht. Nicht bei uns - dank Erika! ')).then(() => bot.say(KonzeptionsBot+' Ich kenne den --Nutzen von --Chats, alle --Kanäle und --Plattformen. ')).then(() => 'konzeption');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(KonzeptionsBot+' Ich bin Erika, Konzeptions-Bot. ').then(() => bot.say(BeratungsBot+' 90% der Fehler werden in den ersten 10% des Projekts gemacht. Nicht bei uns - dank Erika! ')).then(() => bot.say(KonzeptionsBot+' Ich kenne den --Nutzen von --Chats, alle --Kanäle und --Plattformen. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(KonzeptionsBot+' Befehle der --Konzeption: --Nutzung und --Kanäle. ').then(() => bot.say(KonzeptionsBot+' --Nutzen eines Chats: --Chat, --Plattformen. ')).then(() => bot.say(KonzeptionsBot+' --Plattformen: --Slack, --Hipchat, --Smooch, --Facebook und --Web. ')).then(() => 'konzeption');}
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(KonzeptionsBot+' Ich bin Erika, Konzeptions-Bot. ').then(() => bot.say(BeratungsBot+' 90% der Fehler werden in den ersten 10% des Projekts gemacht. Nicht bei uns - dank Erika! ')).then(() => bot.say(KonzeptionsBot+' Ich kenne den --Nutzen von --Chats, alle --Kanäle und --Plattformen. ')).then(() => 'konzeption');}          
        // -----------------
 	    // Nutzung
        // -----------------
@@ -1156,24 +1134,24 @@
        // Kanäle
        // -----------------
           
-          if (~befehl.indexOf("--KANAL")) { versuch = true; return bot.say(KonzeptionsBot+' Ein Bot lässt sich einfach in Ihre bestehenden Marketing-Kanäle einbinden - letztlich ist er nur die URL einer für alle Geräte optimierten Webseite. ').then(() => bot.say(KonzeptionsBot+' CRM/Dialog: Link in Newslettern, Kurzlink/QR-Code auf Drucksachen. ')).then(() => bot.say(KonzeptionsBot+' Marke: Webseiten-Widget, Link in Social Media und E-Mail-Signaturen, Kurzlink/QR-Code auf Visitenkarten. ')).then(() => bot.say(KonzeptionsBot+' Vor Ort: Kurzlink/QR-Code auf Plakat, Aufsteller, Schaufenster, Produkt. ')).then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption. ')).then(() => 'konzeption');}if (~befehl.indexOf("--KANÄLE")) { versuch = true; return bot.say(KonzeptionsBot+' Ein Bot lässt sich einfach in Ihre bestehenden Marketing-Kanäle einbinden - letztlich ist er nur die URL einer für alle Geräte optimierten Webseite. ').then(() => bot.say(KonzeptionsBot+' CRM/Dialog: Link in Newslettern, Kurzlink/QR-Code auf Drucksachen. ')).then(() => bot.say(KonzeptionsBot+' Marke: Webseiten-Widget, Link in Social Media und E-Mail-Signaturen, Kurzlink/QR-Code auf Visitenkarten. ')).then(() => bot.say(KonzeptionsBot+' Vor Ort: Kurzlink/QR-Code auf Plakat, Aufsteller, Schaufenster, Produkt. ')).then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--KANAL")) { versuch = true; return bot.say(KonzeptionsBot+' Ein Bot lässt sich einfach in Ihre bestehenden Marketing-Kanäle einbinden - letztlich ist er nur die URL einer für alle Geräte optimierten Webseite. ').then(() => bot.say(KonzeptionsBot+' --Crm / Dialog, --Marke und --Orte. ')).then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption? ')).then(() => 'konzeption');}if (~befehl.indexOf("--KANÄLE")) { versuch = true; return bot.say(KonzeptionsBot+' Ein Bot lässt sich einfach in Ihre bestehenden Marketing-Kanäle einbinden - letztlich ist er nur die URL einer für alle Geräte optimierten Webseite. ').then(() => bot.say(KonzeptionsBot+' --Crm / Dialog, --Marke und --Orte. ')).then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption? ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--CRM")) { versuch = true; return bot.say(KonzeptionsBot+' Link in Newslettern, Kurzlink/QR-Code auf Drucksachen. ').then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption? ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--MARKE")) { versuch = true; return bot.say(KonzeptionsBot+' Webseiten-Widget, Link in Social Media und E-Mail-Signaturen, Kurzlink/QR-Code auf Visitenkarten. ').then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption? ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--ORT")) { versuch = true; return bot.say(KonzeptionsBot+' Kurzlink/QR-Code auf Plakat, Aufsteller, Schaufenster, Produkt. ').then(() => bot.say(KonzeptionsBot+' Zurück zur --Konzeption? ')).then(() => 'konzeption');}          
        // -----------------
        // Plattformen
        // -----------------
           
-          if (~befehl.indexOf("--SLACK")) { versuch = true; return bot.say(KonzeptionsBot+' Slack ist eine fantastische neue Kommunikationsplattform für Teams! ').then(() => bot.say(KonzeptionsBot+' Wenn Sie Slack noch nicht kennen, erwägen Sie, es für Ihre Interne Kommunikation zu nutzen. Lassen Sie sich dazu von --Barbara unseren --Slack-Artikel für Marketer, den --Slack-Blogpost für Anwender, unsere --Slack-Links und unser --Slack-Team zeigen. ')).then(() => bot.say(KonzeptionsBot+' Slack eignet sich perfekt für eine --interne --Strategie mit --ChatOps. ')).then(() => 'technik');}          
-          if (~befehl.indexOf("--HIPCHAT")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption HipChat 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption HipChat 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption HipChat 3. ')).then(() => 'technik');}          
-          if (~befehl.indexOf("--SMOOCH")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Smooch 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Smooch 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Smooch 3. ')).then(() => 'technik');}          
-          if (~befehl.indexOf("--FACEBOOK")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 3. ')).then(() => 'technik');}	       
-          if (~befehl.indexOf("--WEB")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Web 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Web 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Web 3. ')).then(() => 'technik');}          
+          if (~befehl.indexOf("--SLACK")) { versuch = true; return bot.say(KonzeptionsBot+' Slack ist eine fantastische neue Kommunikationsplattform für Teams! ').then(() => bot.say(KonzeptionsBot+' Wenn Sie Slack noch nicht kennen, erwägen Sie, es für Ihre Interne Kommunikation zu nutzen. Lassen Sie sich dazu von --Barbara unseren --Slack-Artikel für Marketer, den --Slack-Blogpost für Anwender, unsere --Slack-Links und unser --Slack-Team zeigen. ')).then(() => bot.say(KonzeptionsBot+' Slack eignet sich perfekt für eine --interne --Strategie mit --ChatOps. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--HIPCHAT")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption HipChat 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption HipChat 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption HipChat 3. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--SMOOCH")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Smooch 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Smooch 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Smooch 3. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--FACEBOOK")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Facebook Messenger 3. ')).then(() => 'konzeption');}	       
+          if (~befehl.indexOf("--WEB")) { versuch = true; return bot.say(KonzeptionsBot+' Konzeption Web 1. ').then(() => bot.say(KonzeptionsBot+' Konzeption Web 2. ')).then(() => bot.say(KonzeptionsBot+' Konzeption Web 3. ')).then(() => 'konzeption');}          
        // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
        
-       // Einzeilig
-          if (~befehl.indexOf("--KONZEPTION")) { versuch = true; return bot.say(KonzeptionsBot+' Text Konzeption 1. ').then(() => 'konzeption');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--KONZEPTION")) { versuch = true; return bot.say(KonzeptionsBot+' Text Konzeption 1. ').then(() => bot.say(KonzeptionsBot+' Text Konzeption 2. ')).then(() => 'konzeption');}          
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(KonzeptionsBot+' Text Vorlage 1. ').then(() => 'konzeption');}          
 
        // -----------------
        // Bot aus
@@ -1238,7 +1216,7 @@
           
           if ("strategie" != "empfang") {
           	 
-             if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(StrategieBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Strategie? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(StrategieBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Strategie? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(StrategieBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Strategie? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
+             if (~befehl.indexOf("--ABBRECHEN")) { versuch = true; return bot.say(StrategieBot+' Bis später! ').then(() => bot.say(EmpfangsBot+' Willkommen zurück! Wie war es in der --Strategie? Schreiben Sie --Befehle um zu sehen, was ich Ihnen sonst noch zeigen kann. ')).then(() => 'empfang');}             
           }
           
           if (zuletzt_kamel != "Strategie") { 
@@ -1250,7 +1228,7 @@
              if (~befehl.indexOf("--ZURÜCK")) { versuch = true; return bot.say(StrategieBot+' Wollen Sie zurück zum --Empfang? ').then(() => 'strategie');}             
           }
           
-          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'strategie');}if (~befehl.indexOf("--MENUAN")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'strategie');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'strategie');}if (~befehl.indexOf("--MENUAUS")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'strategie');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'strategie');}if (~befehl.indexOf("--MENU")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'strategie');}if (~befehl.indexOf("--MENUE")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'strategie');}          
+          if (~befehl.indexOf("--MENÜAN")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü eingeschaltet. ').then(() => 'strategie');}          if (~befehl.indexOf("--MENÜAUS")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü ausgeschaltet. ').then(() => 'strategie');}          if (~befehl.indexOf("--MENÜ")) { versuch = true; return bot.say(StrategieBot+' [Javascript:menu()] Menü umgeschaltet. ').then(() => 'strategie');}          
        // -----------------
        // Onboarding
        // -----------------
@@ -1276,11 +1254,11 @@
        // Kontakt
        // -----------------
           
-          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(StrategieBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(StrategieBot+'  Wollen Sie --telefonieren, eine --Email schreiben, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}          
+          if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(StrategieBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(StrategieBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(StrategieBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'strategie');}          
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(StrategieBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'strategie');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(StrategieBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'strategie');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(StrategieBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'strategie');}          
-          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(StrategieBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'strategie');}if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(StrategieBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'strategie');}          
+          if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(StrategieBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'strategie');}          
        // -----------------
        // Über uns
        // -----------------
@@ -1297,17 +1275,17 @@
           }
           
        // -----------------
-       // Trivia
+       // Persönlich
        // -----------------
           
-          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir die Seite anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'empfang');}	       
+          if (~befehl.indexOf("--BOB")) { versuch = true; return bot.say(SefzigBot+' Hey Bob, ich bin Sefzigs Bot. Freut mich, dass Du Dir meinen Chatraum anschaust! ').then(() => bot.say(SefzigBot+' Ich kann nicht anders als Dich zu bitten, hier tief reinzuschauen und rumzuprobieren... Der Stand: Alle Basis-Funktionen wie Empfang, Onboarding und Bots und Dinge wie zurück, abbrechen oder mobil laufen. Viele Inhalte stehen bereits (sind aber noch nicht geil), einige Befehle führen ins Leere. Das wird schon noch :D Viel Spass! ')).then(() => bot.say(SefzigBot+' Starte mit --Empfang oder --Menü. ')).then(() => 'strategie');}	       
        // -----------------
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(StrategieBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(StrategieBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(StrategieBot+' Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter! ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(StrategieBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
-          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(StrategieBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(StrategieBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
+          if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(StrategieBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(StrategieBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'strategie');}          
        // Stile
           if (~befehl.indexOf("--TAG")) { versuch = true; return bot.say(StrategieBot+' [Javascript:stil(tag)] Stil: Tag. ').then(() => 'strategie');}          if (~befehl.indexOf("--NACHT")) { versuch = true; return bot.say(StrategieBot+' [Javascript:stil(nacht)] Stil: Nacht. ').then(() => 'strategie');}          if (~befehl.indexOf("--ROBOS")) { versuch = true; return bot.say(StrategieBot+' [Javascript:stil(robogeddon)] Stil: Robogeddon. ').then(() => 'strategie');}          if (~befehl.indexOf("--HX")) { versuch = true; return bot.say(StrategieBot+' [Javascript:stil(hacks)] Stil: Hx. ').then(() => 'strategie');}          
        // -----------------
@@ -1315,8 +1293,8 @@
        // -----------------
           
           if (zuletzt_klein != "sefzig") { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(StrategieBot+' Sprechen Sie solange mit mir, indem Sie --Strategie schreiben! ')).then(() => 'empfang');} } else { 
-             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(StrategieBot+' Sprechen Sie solange mit mir, indem Sie --Strategie schreiben! ')).then(() => 'empfang');}          }
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas benachrichtigt. ').then(() => bot.say(StrategieBot+' Sprechen Sie solange mit mir, indem Sie --Strategie schreiben! ')).then(() => 'strategie');} } else { 
+             if (~befehl.indexOf("--SEFZIG")) { versuch = true; return bot.say(EmpfangsBot+' Ich habe Andreas bereits benachrichtigt. ').then(() => bot.say(StrategieBot+' Sprechen Sie solange mit mir, indem Sie --Strategie schreiben! ')).then(() => 'strategie');}          }
           
           if (zuletzt_klein != "empfang") { 
              if (~befehl.indexOf("--EMPFANG")) { versuch = true; return bot.say(StrategieBot+' Ich übergebe an Alice. Schreiben Sie --Strategie, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');}if (~befehl.indexOf("--ALICE")) { versuch = true; return bot.say(StrategieBot+' Ich übergebe an Alice. Schreiben Sie --Strategie, um wieder mit mir zu sprechen. ').then(() => bot.say(EmpfangsBot+' Hallo, ich bin Alice, der Empfangs-Bot von --Robogeddon. Darf ich Ihnen die Bots aus --Strategie, --Konzeption, --Kreation, --Technik und --Beratung vorstellen? ')).then(() => 'empfang');} } else { 
@@ -1348,8 +1326,8 @@
        // System
        // -----------------
        
-          if (~befehl.indexOf("--BEFEHLE")) { versuch = true; return bot.say(StrategieBot+' Kulturphänomen Chat: --Trend, --Marketing, --Szenarien. ').then(() => bot.say(StrategieBot+' Technologie und Nutzung: --Chat, --Daten, --Plattformen. ')).then(() => bot.say(StrategieBot+' Über --interne Strategie: --Daten, --Team, --Studie. ')).then(() => bot.say(StrategieBot+' Über --externe Strategie: --Kanäle, --Aufgaben. ')).then(() => 'strategie');}if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(StrategieBot+' Kulturphänomen Chat: --Trend, --Marketing, --Szenarien. ').then(() => bot.say(StrategieBot+' Technologie und Nutzung: --Chat, --Daten, --Plattformen. ')).then(() => bot.say(StrategieBot+' Über --interne Strategie: --Daten, --Team, --Studie. ')).then(() => bot.say(StrategieBot+' Über --externe Strategie: --Kanäle, --Aufgaben. ')).then(() => 'strategie');}
-          if (~befehl.indexOf("--UBER")) { versuch = true; return bot.say(StrategieBot+' Ich bin Feline und mache bei uns die Strategie. ').then(() => bot.say(KonzeptionsBot+' Feline ist ein alter Hase im Bot-Geschäft. Ob für --intern oder --extern, sie kennt alle --Trends. ')).then(() => bot.say(StrategieBot+' Wussten Sie, dass es Chat-Bots schon sehr --lange gibt? ')).then(() => 'strategie');}if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(StrategieBot+' Ich bin Feline und mache bei uns die Strategie. ').then(() => bot.say(KonzeptionsBot+' Feline ist ein alter Hase im Bot-Geschäft. Ob für --intern oder --extern, sie kennt alle --Trends. ')).then(() => bot.say(StrategieBot+' Wussten Sie, dass es Chat-Bots schon sehr --lange gibt? ')).then(() => 'strategie');}          
+          if (~befehl.indexOf("--BEFEHL")) { versuch = true; return bot.say(StrategieBot+' Kulturphänomen Chat: --Trend, --Marketing, --Szenarien. ').then(() => bot.say(StrategieBot+' Technologie und Nutzung: --Chat, --Daten, --Plattformen. ')).then(() => bot.say(StrategieBot+' Über --interne Strategie: --Daten, --Team, --Studie. ')).then(() => bot.say(StrategieBot+' Über --externe Strategie: --Kanäle, --Aufgaben. ')).then(() => 'strategie');}
+          if (~befehl.indexOf("--ÜBER")) { versuch = true; return bot.say(StrategieBot+' Ich bin Feline und mache bei uns die Strategie. ').then(() => bot.say(KonzeptionsBot+' Feline ist ein alter Hase im Bot-Geschäft. Ob für --intern oder --extern, sie kennt alle --Trends. ')).then(() => bot.say(StrategieBot+' Wussten Sie, dass es Chat-Bots schon sehr --lange gibt? ')).then(() => 'strategie');}          
        // -----------------
        // Kultur
        // -----------------
@@ -1371,13 +1349,10 @@
           
           if (~befehl.indexOf("--LANGE")) { versuch = true; return bot.say(StrategieBot+' 1966 entstand mit dem Chatbot ELIZA die erste künstliche Intelligenz: %[Ein Nachbau von ELIZA](http://sefzig.net/link/ElizaMedai/)  ').then(() => bot.say(StrategieBot+' 1999 chattete Prince (The artist formerly known usw.) regelmäßig im AOL Messenger: %[Artikel auf Medium (englisch)](http://sefzig.net/link/ChattingWithPrince/)  ')).then(() => bot.say(StrategieBot+' 2001 setzte das Marketing erstmals im großen Stil einen Chatbot ein - für Radioheads neues Album: %[Artikel auf Medium (englisch)](http://sefzig.net/link/GooglyMinotaur/)  ')).then(() => bot.say(StrategieBot+' Ah, Geschichte, immer spannend. Zurück zur --Strategie? ')).then(() => 'strategie');}	       
        // -----------------
-       // Vorlagen
+       // Vorlage
        // -----------------
        
-       // Einzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(StrategieBot+' Text Strategie 1. ').then(() => 'strategie');}          
-       // Mehrzeilig
-          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(StrategieBot+' Text Strategie 1. ').then(() => bot.say(StrategieBot+' Text Strategie 2. ')).then(() => 'strategie');}          
+          if (~befehl.indexOf("--VORLAGE")) { versuch = true; return bot.say(StrategieBot+' Text Vorlage 1. ').then(() => 'strategie');}          
 
        // -----------------
        // Bot aus
