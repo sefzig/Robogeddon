@@ -255,7 +255,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(EmpfangsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(EmpfangsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(EmpfangsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'empfang');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(EmpfangsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'empfang');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'empfang');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'empfang');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'empfang');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(EmpfangsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'empfang');}          
        // -----------------
@@ -282,7 +282,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(EmpfangsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(EmpfangsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(EmpfangsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(EmpfangsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(EmpfangsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'empfang');}          
        // Stile
@@ -436,7 +436,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(BeratungsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(BeratungsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(BeratungsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'beratung');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(BeratungsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'beratung');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(BeratungsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'beratung');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(BeratungsBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'beratung');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'beratung');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(BeratungsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'beratung');}          
        // -----------------
@@ -463,7 +463,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(BeratungsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(BeratungsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(BeratungsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(BeratungsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(BeratungsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(BeratungsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'beratung');}          
        // Stile
@@ -648,7 +648,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(TechnikBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(TechnikBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(TechnikBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'technik');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(TechnikBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'technik');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(TechnikBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'technik');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(TechnikBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'technik');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(TechnikBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'technik');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(TechnikBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'technik');}          
        // -----------------
@@ -675,7 +675,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(TechnikBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(TechnikBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(TechnikBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(TechnikBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(TechnikBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(TechnikBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'technik');}          
        // Stile
@@ -845,7 +845,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KreationsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KreationsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KreationsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'kreation');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(KreationsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'kreation');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KreationsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'kreation');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KreationsBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'kreation');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(KreationsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'kreation');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KreationsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'kreation');}          
        // -----------------
@@ -872,7 +872,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KreationsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KreationsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KreationsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(KreationsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KreationsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KreationsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'kreation');}          
        // Stile
@@ -1051,7 +1051,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(KonzeptionsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(KonzeptionsBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(KonzeptionsBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'konzeption');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(KonzeptionsBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'konzeption');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'konzeption');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'konzeption');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'konzeption');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(KonzeptionsBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'konzeption');}          
        // -----------------
@@ -1078,7 +1078,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(KonzeptionsBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(KonzeptionsBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(KonzeptionsBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(KonzeptionsBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'konzeption');}          
        // Stile
@@ -1263,7 +1263,7 @@
           
           if (~befehl.indexOf("--KONTAKT")) { versuch = true; return bot.say(StrategieBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}if (~befehl.indexOf("--ANFRAGE")) { versuch = true; return bot.say(StrategieBot+' Wollen Sie --telefonieren, --mailen, --twittern oder eine Nachricht in --Xing senden? ').then(() => bot.say(StrategieBot+' Alle unsere Kontaktwege: [Text:Kontakt,RobogeddonKontakt] ')).then(() => 'strategie');}          
           if (~befehl.indexOf("--TELEFON")) { versuch = true; return bot.say(StrategieBot+' Rufen Sie Andreas Sefzig an: [Telefon:+49 151 15920082] ').then(() => 'strategie');}          
-          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(StrategieBot+' Schreiben Sie uns eine Email: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'strategie');}          
+          if (~befehl.indexOf("--MAIL")) { versuch = true; return bot.say(StrategieBot+' Schreiben Sie uns eine E-Mail: [Email:andreas.sefzig@robogeddon.de] ').then(() => 'strategie');}          
           if (~befehl.indexOf("--TWITTER")) { versuch = true; return bot.say(StrategieBot+' Senden Sie uns einen Tweet: [Link:PM in Twitter öffnen,RobogeddonTweet] ').then(() => 'strategie');}          
           if (~befehl.indexOf("--XING")) { versuch = true; return bot.say(StrategieBot+' Senden Sie Andreas Sefzig eine Nachricht in Xing (Premium): [Link:Xing-Profil öffnen,RobogeddonXing] ').then(() => 'strategie');}          
        // -----------------
@@ -1290,7 +1290,7 @@
        // Funktionen
        // -----------------
           
-          if (~befehl.indexOf("--EMAIL")) { versuch = true; return bot.say(StrategieBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(StrategieBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
+          if (~befehl.indexOf("--E-MAIL")) { versuch = true; return bot.say(StrategieBot+' Bitte geben Sie Ihre E-Mail-Adresse ein (oder wollen Sie --abbrechen?) ').then(() => 'emailadresse');}          
           if (~befehl.indexOf("--NEWSLETTER")) { versuch = true; return bot.say(StrategieBot+' Bestellen Sie unseren Newsletter! Alice? ').then(() => 'vorname');}          
           if (~befehl.indexOf("--MOBIL")) { versuch = true; return bot.say(StrategieBot+' Diesen Chat mobil öffnen: [Qr:http://sefzigbot.herokuapp.com/] ').then(() => bot.say(TechnikBot+' Leider werden Sie dort nicht automatisch wiedererkannt. Wir arbeiten an einer Lösung... ')).then(() => bot.say(StrategieBot+' Oder öffnen Sie [Textlink:Robogeddon.herokuapp.com,http://sefzigbot.herokuapp.com] in Ihrem mobilen Browser. ')).then(() => 'strategie');}          
        // Stile
