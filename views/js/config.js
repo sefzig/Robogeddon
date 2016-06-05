@@ -14,7 +14,7 @@
     // Anwendung
        "default": {
           
-          "ansicht": "chat", // chat, daten
+          "ansicht": "daten", // chat, daten
           "stil": "robogeddon", // tag, robogeddon, nacht, hx, cqt
           "menu": "robogeddon", // chatraum, robogeddon, cqt
        // "intro": "an", // an, aus
