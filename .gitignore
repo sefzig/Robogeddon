@@ -34,3 +34,9 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
+
+views/css/index_save.css
+
+views/js/funktionen_save.js
+
+views/js/index_save.js

@@ -135,9 +135,20 @@
              input.parentNode.appendChild(tmp);
              var width = tmp.clientWidth+pad_right+1;
              tmp.parentNode.removeChild(tmp);
+             
              if(min <= width && width <= max)
-                input.style.width = width+'px';
+             {
                 
+             // input.style.width = width+'px';
+                
+                input_einer =   inputId.replace("Daten", "Menu");
+                input_anderer = inputId.replace("Menu", "Daten");
+                
+                document.getElementById(input_einer).style.width =   width+'px';
+                document.getElementById(input_anderer).style.width = width+'px';
+                
+             } 
+              
           }, 1);
        };
     }

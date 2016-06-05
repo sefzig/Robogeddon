@@ -53,6 +53,11 @@
  /* Seite */
  /* ----------------- */
     
+ /* Anzeige */
+    #seite > #daten, 
+    #seite > #chat {
+       display: none;
+    }
  /* Dimensionen */
     #seite > #daten, 
     #seite > #chat, 
@@ -68,7 +73,6 @@
        left: 0px;
        right: 0px;
     }
-    #seite > #daten > div,
     #seite > #menu > div > div {
        margin: 15px;
        margin-bottom: 15px;
@@ -89,7 +93,6 @@
     }
     #seite > #daten {
        z-index: 101;
-       background:red;
     }
     #seite > #chat {
        z-index: 102;
@@ -125,13 +128,73 @@
     
  /* Daten */
     #seite > #daten {
+       background: white;
+    }
+    #seite > #daten > div {
+       margin: 0px;
+       padding: 0px;
+       padding-left: 15px;
+       padding-right: 15px;
+    }
+    #seite > #daten > div h2,
+    #seite > #daten > div p {
+       margin: 0px;
+       margin-top: 15px;
+       margin-bottom: 15px;
+       padding: 0px;
+    }
+    #seite > #daten > div h2 {
+       
+    }
+    #seite > #daten > div div {
+       position: relative;
+       margin-left: auto;
+       margin-right: auto;
+       padding: 15px;
        background: transparent;
+       text-align: center;
+    }
+    #seite > #daten > div div img {
+       max-width: 100%;
+       max-height: 400px;
+    }
+    #seite > #daten > div div div {
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       bottom: 0px;
+       right: 0px;
+       background: transparent;
+    }
+    #seite > #daten > div div div table {
+       background: transparent;
+    }
+    #seite > #daten > div div div table,
+    #seite > #daten > div div div tr,
+    #seite > #daten > div div div td {
+       padding: 0px;
+       text-align: center;
+       vertical-align: middle;
+    }
+    #seite > #daten > div div div table {
+       width: 100%;
+       height: 100%;
+    }
+    #seite > #daten > div div input {
+       text-align: center;
+    }
+    #seite > #daten > div div input[type="submit"] {
+       cursor: pointer;
     }
     
  /* Chat */
     #seite > #chat {
        background: white;
     }
+    
+ /* ----------------- */
+ /* Menü              */
+ /* ----------------- */
     
  /* Menü (Default) */
     #menu > div {
@@ -146,13 +209,13 @@
        margin-bottom: 10px;
     }
     
-    @media (min-width:   1px) { #menu, #menu button, #menu #formular input { font-size:  8px !important; } #menu h2 { font-size: 12px; } #menu h3 { font-size: 10px !important; } }
-    @media (min-width: 400px) { #menu, #menu button, #menu #formular input { font-size:  9px !important; } #menu h2 { font-size: 13px; } #menu h3 { font-size: 11px !important; } }
-    @media (min-width: 430px) { #menu, #menu button, #menu #formular input { font-size: 10px !important; } #menu h2 { font-size: 14px; } #menu h3 { font-size: 12px !important; } }
-    @media (min-width: 460px) { #menu, #menu button, #menu #formular input { font-size: 11px !important; } #menu h2 { font-size: 15px; } #menu h3 { font-size: 13px !important; } }
-    @media (min-width: 500px) { #menu, #menu button, #menu #formular input { font-size: 12px !important; } #menu h2 { font-size: 16px; } #menu h3 { font-size: 14px !important; } }
-    @media (min-width: 550px) { #menu, #menu button, #menu #formular input { font-size: 13px !important; } #menu h2 { font-size: 17px; } #menu h3 { font-size: 15px !important; } }
-    @media (min-width: 600px) { #menu, #menu button, #menu #formular input { font-size: 14px !important; } #menu h2 { font-size: 18px; } #menu h3 { font-size: 16px !important; } }
+    @media (min-width:   1px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size:  8px !important; } #menu h2, #daten h2 { font-size: 12px; } #menu h3, #daten h3 { font-size: 10px !important; } }
+    @media (min-width: 400px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size:  9px !important; } #menu h2, #daten h2 { font-size: 13px; } #menu h3, #daten h3 { font-size: 11px !important; } }
+    @media (min-width: 430px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size: 10px !important; } #menu h2, #daten h2 { font-size: 14px; } #menu h3, #daten h3 { font-size: 12px !important; } }
+    @media (min-width: 460px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size: 11px !important; } #menu h2, #daten h2 { font-size: 15px; } #menu h3, #daten h3 { font-size: 13px !important; } }
+    @media (min-width: 500px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size: 12px !important; } #menu h2, #daten h2 { font-size: 16px; } #menu h3, #daten h3 { font-size: 14px !important; } }
+    @media (min-width: 550px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size: 13px !important; } #menu h2, #daten h2 { font-size: 17px; } #menu h3, #daten h3 { font-size: 15px !important; } }
+    @media (min-width: 600px) { #menu, #menu button, #menu #formular input, #daten input, #daten span { font-size: 14px !important; } #menu h2, #daten h2 { font-size: 18px; } #menu h3, #daten h3 { font-size: 16px !important; } }
     
     #menu div > div button,
     #menu div > div a { 
@@ -279,12 +342,12 @@
     #sk-header > span:before {
        content: ".!,,!";
        display: inline;
-       background: url("http://sefzig.net/text/seiten/RobogeddonCdn/dateien/Displaybild_SefzigBot.png") no-repeat;
+       background: url("http://sefzig.net/text/seiten/ChatraumCdn/dateien/Displaybild_SefzigBot.png") no-repeat;
        width: 20px;
        height: 20px;
        margin: 0 6px 0 0;
     }
-  */ 
+  */
  /* ----------------- */
  /* Nachrichten */
  /* ----------------- */

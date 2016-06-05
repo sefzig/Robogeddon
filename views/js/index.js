@@ -22,14 +22,14 @@
        cookie("email");
        
     // Chat starten
-       starten = config["anwendung"]["defaultAnsicht"];
+       starten = config["default"]["ansicht"];
        ansicht = getParameters("v");
        if (ansicht == "chat")  { starten = "chat"; }
        if (ansicht == "daten") { starten = "daten"; }
        window.setTimeout(function() { start(starten); }, 100);
        
     // Benutzeroberfläche
-       selektor = "input[data-start], img[data-start], a[data-start]";
+       selektor = "input[data-start], img[data-start], a[data-start], td[data-start]";
        $(selektor).click(function(e) {
           
        // Elemente
@@ -48,12 +48,12 @@
     // menu("an");
        
     // Menü auswählen und anzeigen
-       menue = getParameters("menu");
+       menue = getParameters("m");
        if ((!menue) || (menue == "")) { 
-          menue = config["anwendung"]["defaultMenu"];
+          menue = config["default"]["menu"];
        }
        $("#menu > div").css("display", "none");
-       $("#menu > #"+menue).css("display", "block");
+       $("#menu > ."+menue).css("display", "block");
        
     // Befehle im Menü
        selektor = "#seite > #menu div > div button";
@@ -76,25 +76,39 @@
        });
        
     // Menü-Button default
-       var menuConfig = config["anwendung"]["defaultButton"];
+       var menuConfig = config["default"]["button"];
        if (menuConfig == "an") { $("#start").fadeIn(); }
        
     // Befehler-Button default
-       var befehlerConfig = config["anwendung"]["defaultBefehler"];
+       var befehlerConfig = config["default"]["befehler"];
        if (befehlerConfig == "an") { $("#befehle").fadeIn(); }
+       
+    // Intro-Texte einsetzen
+       $("#namenEingeben").html(texte["intro"]["namenEingeben"]);
        
     });
     
  // Chat starten
     function start(methode) {
        
+    // Variablen zurücksetzen
        var vorname = "";
        var nachname = "";
        var email = "";
        var sagen = "";
+       
+    // Zu Daten umleiten falls Namenzwang und Namenlos
+       var namezwang = config["default"]["name"];
+       if ((methode == "chat") && (namezwang == "an")) {
           
-    // Ansichten anpassen
-    // $("#seite > div").fadeOut();
+          bereit = "ja";
+          vorname =  $("#vornameDaten").val();  if ((vorname  == daten["label"]["vorname"])  || (!vorname)  || (vorname  == "")) { bereit = "nein"; }
+          nachname = $("#nachnameDaten").val(); if ((nachname == daten["label"]["nachname"]) || (!nachname) || (nachname == "")) { bereit = "nein"; }
+          
+       // Methode zurücksetzen
+          if (bereit == "nein") { methode = "daten"; }
+          
+       }
        
     // Chat starten
        if (methode == "chat") {
@@ -102,21 +116,26 @@
        // Debuggen
        // console.log('\n\nNeues Gespräch\n');
           
+          var vornameZufall = "Nutzer";
+          var nachnameZufall = Math.floor(Math.random()*999999);
+          
        // Daten aus Formular übernehmen
-          vorname =  $("#vorname").val();
-          nachname = $("#nachname").val();
-          email =    $("#email").val();
+          vorname =  $("#vornameDaten").val();  if (vorname  == daten["label"]["vorname"])  { vorname =  vornameZufall; }
+          nachname = $("#nachnameDaten").val(); if (nachname == daten["label"]["nachname"]) { nachname = nachnameZufall; }
+          email =    $("#emailDaten").val();    if (email    == daten["label"]["email"])    { email =    ""; }
           
        // Smooch Js
        // https://github.com/smooch/smooch-js
           var skPromise = Smooch.init({ 
              appToken: config["smooch"]["appToken"],
              embedded: true,
+             givenName: vorname,
+             surname: nachname,
              customText: {
                 headerText:                    texte["chat"]["headerText"],
                 inputPlaceholder:              texte["chat"]["inputPlaceholder"],
                 sendButtonText:                texte["chat"]["sendButtonText"],
-                introText:                     texte["chat"]["introText"],
+                introText:                     texte["chat"]["startText"],
                 settingsText:                  texte["chat"]["settingsText"],
                 settingsReadOnlyText:          texte["chat"]["settingsReadOnlyText"],
                 settingsInputPlaceholder:      texte["chat"]["settingsInputPlaceholder"],
@@ -163,6 +182,8 @@
           // console.log('- Nutzer hat eine Nachricht gesendet');
           // $(".sk-messages").append('<img src="img/ui/Schreiben.gif" class="typing" />');
              
+             Cookies.set(daten["cookie"]["gesprochen"], "ja");
+             
           });
           Smooch.on('message:received', function(message) {
              
@@ -176,11 +197,66 @@
        // Konversation rendern
           anpassen();
           
-          $("#seite > #chat").fadeIn();
+       // Ansichten anpassen
+          $("#seite > #chat, #seite > #daten").fadeOut();
+       
+       // Inhalt anzeigen
+          $("#seite > #"+methode).fadeIn();
        
        // Fokus auf Eingabe
           $("#sk-footer .message-input").focus();
        // window.setTimeout(function() { blink(); }, 2000);
+          
+       }
+       
+    // Daten anzeigen starten
+       if (methode == "daten") {
+          
+          var gesprochen = Cookies.get(daten["cookie"]["gesprochen"]);
+          var ansicht =    config["default"]["ansicht"];
+          
+          if (gesprochen == "ja") {
+             
+             start("chat");
+             
+          }
+          else if (ansicht == "daten") {
+             
+          // Inhalt anzeigen
+             $("#seite > #"+methode).fadeIn();
+          
+             $('#daten input[type=text], #menu input[type=text]').on('keydown', function(e) {
+                
+                if (e.which == 13) {
+                   
+                   start("chat");
+                   e.preventDefault();
+                   
+                }
+                
+             });
+          
+             $('#daten input.nachname').on('keydown', function(e) {
+                
+                if (e.which == 9) {
+                   
+                   e.preventDefault();
+                   
+                }
+                
+             });
+             
+          }
+          else if (ansicht == "chat") {
+	          
+             start("chat");
+             
+          }
+          else {
+	          
+             alert("komisch...");
+             
+          }
           
        }
        
@@ -509,11 +585,8 @@
           text_neu = inhalt("bot", text_neu, "SefzigBot",      "Andreas Sefzigs Bot",    zufall, "Sefzig");
           
           text_neu = inhalt("bot", text_neu, "EmpfangsBot",    "Alice, Empfangs-Bot",    zufall, "Empfang");
-          text_neu = inhalt("bot", text_neu, "BeratungsBot",   "Barbara, Beratungs-Bot", zufall, "Beratung");
-          text_neu = inhalt("bot", text_neu, "TechnikBot",     "Cynthia, Technik-Bot",   zufall, "Technik");
-          text_neu = inhalt("bot", text_neu, "KreationsBot",   "Doris, Kreations-Bot",   zufall, "Kreation");
-          text_neu = inhalt("bot", text_neu, "KonzeptionsBot", "Erika, Konzeptions-Bot", zufall, "Konzeption");
-          text_neu = inhalt("bot", text_neu, "StrategieBot",   "Feline, Strategie-Bot",  zufall, "Strategie");
+          text_neu = inhalt("bot", text_neu, "VerkaufsBot",    "Barbara, Verkaufs-Bot",  zufall, "Verkauf");
+          text_neu = inhalt("bot", text_neu, "MarketingBot",   "Cynthia, Marketing-Bot", zufall, "Marketing");
           
        // Bots zusammenfassen
           window.setTimeout(function() { 
@@ -648,20 +721,23 @@
           if ((wert)  && (wert != ""))  { wert = wert; } 
           else { wert = daten["label"][name]; } 
           
-          $("#"+name).val(wert).trigger("change");
+          $("#"+name+"Daten, #"+name+"Menu").val(wert);
+          $("#"+name+"Daten").trigger("change");
           
-          $("#"+name).change(function(){  
+          $("#"+name+"Daten, #"+name+"Menu").change(function(){  
              
              var wert_neu = $(this).val();
              
              if ((wert_neu) && (wert_neu != "") && (wert_neu != daten["label"][name]) && (wert_neu != daten["default"][name])) {
                 
                 Cookies.set(daten["cookie"][name], wert_neu);
+                $("#"+name+"Daten, #"+name+"Menu").val(wert_neu).trigger("change");
                 
              }
              else {
                 
-                $("#"+name).val(daten["label"][name]).trigger("change");
+                $("#"+name+"Daten, #"+name+"Menu").val(daten["label"][name]);
+                $("#"+name+"Daten").trigger("change");
                 
              }
              
@@ -749,7 +825,7 @@
           
           if ((!auswahl) || (auswahl == "")) {
              
-             auswahl = config["anwendung"]["defaultStil"];
+             auswahl = config["default"]["stil"];
              
           }
        
@@ -859,7 +935,8 @@
        window.Smooch.updateUser(update);
     // console.log("Cookies: Smooch-User '"+id+"' Info: "+wert);
        
-       $("#menu #formular #"+id).val(wert).trigger("change");
+       $("."+id).val(wert);
+       $("#menu #"+id).trigger("change");
        
     }
     

@@ -7,12 +7,20 @@
           
           "id": "Robogeddon", // Robogeddon, Sefzigbot, Chatraum
           "name": "Robogeddon",
-          "defaultAnsicht": "chat", // chat, daten
-          "defaultStil": "robogeddon", // tag, robogeddon, nacht, hx, cqt
-          "defaultMenu": "robogeddon", // chatraum, robogeddon, cqt
-          "defaultButton": "aus", // an, aus
-          "defaultBefehler": "aus", // an, aus
           "cdn" : "http://sefzig.net/text/seiten/RobogeddonCdn/dateien/"
+          
+       },
+       
+    // Anwendung
+       "default": {
+          
+          "ansicht": "chat", // chat, daten
+          "stil": "robogeddon", // tag, robogeddon, nacht, hx, cqt
+          "menu": "robogeddon", // chatraum, robogeddon, cqt
+       // "intro": "an", // an, aus
+          "name": "aus", // an, aus
+          "button": "aus", // an, aus
+          "befehler": "aus" // an, aus
           
        },
        
@@ -61,9 +69,10 @@
        "cookie": {
        	
        // Namen
-          "vorname":  ""+config["anwendung"]["id"]+"Vorname",
-          "nachname": ""+config["anwendung"]["id"]+"Nachname",
-          "email":    ""+config["anwendung"]["id"]+"Email"
+          "vorname":    ""+config["anwendung"]["id"]+"Vorname",
+          "nachname":   ""+config["anwendung"]["id"]+"Nachname",
+          "email":      ""+config["anwendung"]["id"]+"Email",
+          "gesprochen": ""+config["anwendung"]["id"]+"Gesprochen"
           
        }
        
@@ -71,6 +80,14 @@
        
  // Texte
     var texte = {
+       
+    // Texte des Intros
+       "intro": {
+       	 
+       // Intro
+          "namenEingeben": "Wenn Sie möchten, geben Sie Ihren Namen an:"
+       	 
+       },
        
     // Texte des Chats
        "chat": {
@@ -256,9 +273,9 @@
           [
              "<center>",
                 "<img class='%klasse%' ",
-                   "src='http://chart.apis.google.com/chart?chs=225x225&cht=qr&chld=L&chf=bg,s,65432100&chl=%inhalt%' />",
+                   "src='http://chart.apis.google.com/chart?chs=225x225&cht=qr&chld=L&chf=s,65432100&chl=%inhalt%' />", // &chf=bg,s,65432100
              "</center> ",
-             "%inhalt%"
+             "<a href=%inhalt% target=_blank>%inhalt%</a>"
           ],
           
        // Iframe
