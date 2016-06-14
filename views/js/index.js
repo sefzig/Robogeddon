@@ -11,15 +11,21 @@
        android:    function() { return navigator.userAgent.match(/Android/i); },
        blackberry: function() { return navigator.userAgent.match(/BlackBerry/i); },
        ios:        function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+       ipad:       function() { return navigator.userAgent.match(/iPad/i); },
+       iphone:     function() { return navigator.userAgent.match(/iPhone/i); },
+       ipod:       function() { return navigator.userAgent.match(/iPod/i); },
        opera:      function() { return navigator.userAgent.match(/Opera Mini/i); },
        windows:    function() { return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i); },
-       any:        function() { return (istMobil.android() || istMobil.blackberry() || istMobil.ios() || istMobil.opera() || istMobil.windows()); }
+       any:        function() { return (istMobil.android() || istMobil.blackberry() || istMobil.iphone() || istMobil.ipod() || istMobil.opera() || istMobil.windows()); }
        };
    
     // Mobile Anpassungen
        if (istMobil.android())    { $("body").attr("data-mobil", "android"); }
        if (istMobil.blackberry()) { $("body").attr("data-mobil", "blackberry"); }
        if (istMobil.ios())        { $("body").attr("data-mobil", "ios"); }
+       if (istMobil.ipad())       { $("body").attr("data-mobil", "ipad"); }
+       if (istMobil.ipod())       { $("body").attr("data-mobil", "ipod"); }
+       if (istMobil.iphone())     { $("body").attr("data-mobil", "iphone"); }
        if (istMobil.opera())      { $("body").attr("data-mobil", "opera"); }
        if (istMobil.windows())    { $("body").attr("data-mobil", "windows"); }
        
@@ -128,7 +134,7 @@
        
     // Befehler-Button default
        var befehlerConfig = config["default"]["befehler"];
-       if (befehlerConfig == "an") { $("#befehle").fadeIn(); }
+       if (befehlerConfig == "an") { $("#befehlleiste").fadeIn(); }
        
     // Intro-Texte einsetzen
        $("#namenEingeben").html(texte["intro"]["namenEingeben"]);
@@ -246,6 +252,9 @@
           // $(".sk-messages").append('<img src="img/ui/Schreiben.gif" class="typing" />');
              
              Cookies.set(daten["cookie"]["gesprochen"], "ja");
+             $("#menu").css("display","block");
+             $('body').animate({scrollLeft: '0px'}, 'slow');
+             $('#sk-conversation').animate({scrollTop: $('.sk-messages').height()}, 'slow');
              
           });
           Smooch.on('message:received', function(message) {
@@ -260,14 +269,17 @@
        // Konversation rendern
           anpassen();
           
-       // Ansichten anpassen
-          $("#seite > #chat, #seite > #daten").fadeOut();
-       
        // Inhalt anzeigen
-          $("#seite > #"+methode).fadeIn();
+          $("#seite > #"+methode).fadeIn(300, function() {
+          
+          // Daten ausblenden
+             $("#seite > #daten").fadeOut();
+       
+          });
        
        // Fokus auf Eingabe
-          $("#sk-footer .message-input").focus();
+          var mobil = $("body").attr("data-mobil");
+          if (mobil == "") { $("#sk-footer .message-input").focus(); }
        // window.setTimeout(function() { blink(); }, 2000);
           
        }
@@ -286,7 +298,7 @@
           else if (ansicht == "daten") {
              
           // Inhalt anzeigen
-             $("#seite > #"+methode).fadeIn();
+             $("#seite > #"+methode).css("display","block");
           
              $('#daten input[type=text], #menu input[type=text]').on('keydown', function(e) {
                 
@@ -367,15 +379,15 @@
        // alert("Befehler laden: "+inhalt);
           
        // Befehler-Button anzeigen
-          $("#befehle").fadeIn();
+          $("#befehlleiste").css("display", "block");
           
           selektor = "#sk-footer";
           $(selektor).mouseenter(function() {
-             $("#befehle input").addClass("aktiv");
+             $("#befehlleiste input").addClass("aktiv");
           });
 
           $(selektor).mouseleave(function() {
-             $("#befehle input").removeClass("aktiv");
+             $("#befehlleiste input").removeClass("aktiv");
              befehlerSchalter("aus");
           });
           
@@ -454,7 +466,7 @@
           klasse = klasse.toLowerCase();
           
        // Cta-Text von URL trennen
-          if ((modul == "Button") || (modul == "Text") || (modul == "Link") || (modul == "Textlink") || (modul == "Linkliste") || (modul == "Email") || (modul == "Telefon")) { 
+          if ((modul == "Button") || (modul == "Text") || (modul == "Textzeit") || (modul == "Textmobil") || (modul == "Link") || (modul == "Textlink") || (modul == "Linkliste") || (modul == "Email") || (modul == "Telefon")) { 
              
           // console.log("> Button Var: "+var1);
              var buttons = text_string.split("["+modul+":");
@@ -649,6 +661,8 @@
           text_neu = inhalt("modul", text_neu, "Audio");
           text_neu = inhalt("modul", text_neu, "Youtube");
           text_neu = inhalt("modul", text_neu, "Linkliste"); 
+          text_neu = inhalt("modul", text_neu, "Textzeit"); 
+          text_neu = inhalt("modul", text_neu, "Textmobil"); 
           text_neu = inhalt("javascript", text_neu, funktionen, " ");
           
        // Bots anpassen
@@ -761,20 +775,23 @@
      // console.log("befehlerSchalter('"+methode+"')");
        if ((!methode) || (methode == "")) {
           
-          var stand = $("#befehle input").val();
+          var stand = $("#befehlleiste input").val();
           if (stand == "i") { methode = "an"; }
           else { methode = "aus"; }
        
        }
        
        if (methode == "an") {
-          $(".befehle").fadeIn();
-          $("#befehle input").val("x");
+          $(".befehle").off().fadeIn();
+          $("#befehlleiste input").val("x");
        }
        else {
-          $(".befehle").fadeOut();
-          $("#befehle input").val("i");
+          $(".befehle").off().fadeOut();
+          $("#befehlleiste input").val("i");
        }
+       
+    // :/
+       window.setTimeout(function() { $(".befehle > div").off().css("display","block"); },1);
        
     }
     
@@ -926,19 +943,32 @@
        dateiendung = "jpg";
        if (auswahl == "Hacks") { dateiendung = "gif"; }
        
-       $("body > #hintergrund img")
-       .attr("src", "")
-       .attr("src", config["anwendung"]["cdn"]+"Stil_"+auswahl+"_1200x1200."+dateiendung)
-       .attr("alt", "Hintergrundbild des Stils '"+auswahl+"'");
-    // $("#chat").css("outline", "black 3px solid");
-       
        Cookies.set(daten["cookie"]["stil"], auswahl, { expires: 365 });
+       
+       window.setTimeout(function() {
+       
+          $("body > #hintergrund img")
+          .attr("src", "")
+          .attr("src", config["anwendung"]["cdn"]+"Stil_"+auswahl+"_1200x1200."+dateiendung)
+          .attr("alt", "Hintergrundbild des Stils '"+auswahl+"'");
+       // $("#chat").css("outline", "black 3px solid");
+          
+       }, 1000);
        
     }
     
  // Menü an- oder ausschalten
     function menu(methode) {
        
+    // Auf Mobil zunächst abbrechen 
+       var mobil = $("body").attr("data-mobil");
+       var hindern = $("body").attr("data-mobil-hindern");
+       if ((mobil != "") && (hindern != "aus")) {
+          $("#start").fadeIn(300);
+          $("body").attr("data-mobil-hindern", "aus");
+          return;
+       }
+          
     // console.log("\n\nmenu('"+methode+"')");
        
     // Toggle ermitteln
@@ -975,31 +1005,38 @@
        
        if (zeit > zeitClient) {
           
+          var mobil = $("body").attr("data-mobil");
+          
        // Animation vorbreiten
           if (methode == "an") {
                 
              methode_neu = "aus";
              left_neu = "0%";
-             breite_neu = "60%";
+             if (mobil != "") { breite_neu = "100%"; } else { breite_neu = "84%"; }
+             zeigen = "block";
           // console.log("neue methode (an): '"+methode+"'");
                 
           }
           else {
              
              methode_neu = "an";
-             left_neu = "-40%";
+             if (mobil != "") { left_neu = "-84%"; } else { left_neu = "-42%"; }
              breite_neu = "100%";
+             zeigen = "block"; // "none"
           // console.log("neue methode (aus): '"+methode+"'");
              
           }
           
        // Animieren
-          $("#seite > #menu").animate({ right: left_neu }, 300);
+          $("#seite > #menu, #sk-footer").animate({ right: left_neu }, 300);
           $("#seite .sk-logo").animate({ width: breite_neu }, 300);
           $("body").attr("data-menu", methode_neu);
           
        // Button einblenden
-          window.setTimeout(function() { $("#start").fadeIn(300); }, 300);
+          window.setTimeout(function() { 
+             $("#menu").css("display", zeigen); // s.o.
+             $("#start").fadeIn(300); 
+          }, 300);
           
        // Zeit speichern
           $("body").attr("data-menu-zeit", zeit);

@@ -18,7 +18,6 @@
           "stil": "robogeddon", // tag, robogeddon, nacht, hx
           "menu": "robogeddon", // chatraum, robogeddon
           "client": "robogeddon", // chatraum, robogeddon (eigentlich "client")
-       // "intro": "an", // an, aus
           "name": "aus", // an, aus
           "button": "aus", // an, aus
           "befehler": "aus" // an, aus
@@ -79,7 +78,7 @@
        }
        
     };
-       
+      
  // Texte
     var texte = {
        
@@ -96,7 +95,7 @@
        	 
        // Benutzeroberfläche
           "headerText": "#Robogeddon",
-          "startText": "Dies ist der Anfang unseres Gesprächs.<br/><span class=blink>Schreiben Sie irgendetwas, um zu beginnen - z.B. Hallo!</span>",
+          "startText": "Dies ist der Anfang unseres Gesprächs.<br/><span class=blink>Schreiben Sie irgendetwas, um zu beginnen<span class=nicht_iphone> - z.B. Hallo</span>!</span>",
           "inputPlaceholder": "Schreiben Sie eine Nachricht...",
           "sendButtonText": "Absenden",
           
@@ -146,13 +145,13 @@
           "leiste": [
              
              "<div class='befehle'>",
-               "<div>",
-                 "<div class='befehler' rel='Befehle'><span onclick='befehlerKlick(\"Befehle\"); befehlerSchalter(); $(this).parent().fadeOut();'>Befehle</span><span onclick='$(this).parent().fadeOut();'> x </span> </div>",
-                 "<div class='befehler' rel='Über'   ><span onclick='befehlerKlick(\"Über\");    befehlerSchalter(); $(this).parent().fadeOut();'>Über</span><span    onclick='$(this).parent().fadeOut();'> x </span> </div>",
-                 "<div class='befehler' rel='Hallo'  ><span onclick='befehlerKlick(\"Hallo\");   befehlerSchalter(); $(this).parent().fadeOut();'>Hallo</span><span   onclick='$(this).parent().fadeOut();'> x </span> </div>",
+               "<div style='display:block !important'>",
+                 "<div class='befehler' rel='Befehle'><span onclick='befehlerKlick(\"Befehle\"); befehlerSchalter(); $(this).parent().fadeOut();'> Befehle </span><span onclick='$(this).parent().fadeOut();'> x </span> </div>",
+                 "<div class='befehler' rel='Über'   ><span onclick='befehlerKlick(\"Über\");    befehlerSchalter(); $(this).parent().fadeOut();'> Über    </span><span onclick='$(this).parent().fadeOut();'> x </span> </div>",
+                 "<div class='befehler' rel='Hallo'  ><span onclick='befehlerKlick(\"Hallo\");   befehlerSchalter(); $(this).parent().fadeOut();'> Hallo   </span><span onclick='$(this).parent().fadeOut();'> x </span> </div>",
                "</div>",
              "</div>",
-             "<div id='befehle' style=''>",
+             "<div id='befehlleiste' style=''>",
                "<input tabindex='99' type='button' value='i' onclick='befehlerSchalter();' />",
              "</div>"
              
@@ -240,6 +239,34 @@
                    "return false;'>",
                 "%var1%",
              "</a>",
+          ],
+          
+       // Nach Tageszeit angepasster Text
+          "Textzeit":
+          [
+             "<span class='textZeit'>",
+                "%var2%",
+             "</span>",
+             "<script>",
+             "   var zeittext = \"\"; ",
+             "   var zeiten = new Date(); ",
+             "   zeit = zeiten.getHours(); ",
+             "   if (zeit < 12) { zeittext = \"%var1%\"; } ",
+             "   else if (zeit < 18) { zeittext = \"%var2%\"; } ",
+             "   else { zeittext = \"%var3%\"; } ",
+             "   $(\".textZeit\").html(zeittext);",
+             "</script>"
+          ],
+          
+       // An Endgerät angepasster Text
+          "Textmobil":
+          [
+             "<span class='nur_mobil'>",
+                "%var1%",
+             "</span>",
+             "<span class='nicht_mobil'>",
+                "%var2%",
+             "</span>"
           ],
           
        // Button mit Link

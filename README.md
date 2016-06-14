@@ -1,5 +1,5 @@
 
-#Robogeddon Chatraum 
+#ROBOGEDDON Chatraum 
 
 Node.js Anwendung für einen mit Bots belebten 1-zu-1-Chat. 
 

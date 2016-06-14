@@ -100,9 +100,13 @@
     }
     #seite > #menu {
        z-index: 103;
-       right: -40%;
+       right: -42%;
        bottom: 56px;
-       width: 40%;
+       width: 42%;
+    }
+    body:not([data-mobil=""]) #seite > #menu {
+       right: -84%;
+       width: 84%;
     }
     
  /* Burger-Menü */
@@ -167,10 +171,10 @@
     @media (min-height:  500px) { #seite > #daten > div div img { max-height:  400px; animation-name: hohe5;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe5  { to { max-height: 400px; } }
     @media (min-height:  550px) { #seite > #daten > div div img { max-height:  460px; animation-name: hohe6;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe6  { to { max-height: 460px; } }
     @media (min-height:  600px) { #seite > #daten > div div img { max-height:  410px; animation-name: hohe7;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe7  { to { max-height: 410px; } }
-    @media (min-height:  650px) { #seite > #daten > div div img { max-height:  470px; animation-name: hohe8;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe8  { to { max-height: 470px; } }
+    @media (min-height:  660px) { #seite > #daten > div div img { max-height:  460px; animation-name: hohe8;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe8  { to { max-height: 470px; } }
     @media (min-height:  700px) { #seite > #daten > div div img { max-height:  510px; animation-name: hohe9;  animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe9  { to { max-height: 510px; } }
-    @media (min-height:  725px) { #seite > #daten > div div img { max-height:  540px; animation-name: hohe10; animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe10 { to { max-height: 540px; } }
-    @media (min-height:  750px) { #seite > #daten > div div img { max-height:  570px; animation-name: hohe11; animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe11 { to { max-height: 570px; } }
+    @media (min-height:  725px) { #seite > #daten > div div img { max-height:  535px; animation-name: hohe10; animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe10 { to { max-height: 540px; } }
+    @media (min-height:  750px) { #seite > #daten > div div img { max-height:  560px; animation-name: hohe11; animation-duration: 1s; animation-iteration-count: 1; }} @keyframes hohe11 { to { max-height: 570px; } }
     
     #seite > #daten > div div div {
        position: absolute;
@@ -222,6 +226,13 @@
        margin: 0px;
        margin-bottom: 10px;
     }
+    
+    body:not([data-mobil=""]) #menu,  body:not([data-mobil=""]) #menu  *  { font-size: 14px !important; }
+    body:not([data-mobil=""]) #daten, body:not([data-mobil=""]) #daten *  { font-size: 14px !important; }
+    body:not([data-mobil=""]) #menu  h2 { font-size: 18px !important; }
+    body:not([data-mobil=""]) #menu  h3 { font-size: 16px !important; }
+    body:not([data-mobil=""]) #daten h2 { font-size: 18px !important; }
+    body:not([data-mobil=""]) #daten h3 { font-size: 16px !important; }
     
     @media (min-width:   1px) { #menu, #menu button, #menu input, #daten input, #daten span { font-size:  8px !important; } #menu h2, #daten h2 { font-size: 12px; } #menu h3, #daten h3 { font-size: 10px !important; } }
     @media (min-width: 400px) { #menu, #menu button, #menu input, #daten input, #daten span { font-size:  9px !important; } #menu h2, #daten h2 { font-size: 13px; } #menu h3, #daten h3 { font-size: 11px !important; } }
@@ -312,6 +323,7 @@
        bottom: 0px;
        padding-top: 3px !important;
        padding-bottom: 7px !important;
+       width: 100%;
        height: 55px !important;
        right: -1px;
     }
@@ -332,7 +344,7 @@
     .sk-messages-container .sk-logo {
        text-align: center;
        margin-left: 0px !important;
-       width: 60%;
+       width: 84%;
     }
     
  /* Farben */
@@ -368,6 +380,9 @@
  /* ----------------- */
     
  /* Dimensionen */
+    body:not([data-mobil=""]) .sk-msg { 
+       max-width: 222px !important;
+    }
     .sk-msg { 
        max-width: 250px !important;
     }
@@ -511,16 +526,17 @@
  /* Umgebung */
  /* ----------------- */
     
-    @media (min-width:   1px) { body[data-menu="aus"] .sk-msg { max-width: 150px !important; transition: all 0.3s linear; font-size: 11px !important; } }
-    @media (min-width: 410px) { body[data-menu="aus"] .sk-msg { max-width: 170px !important; transition: all 0.3s linear; font-size: 12px !important; } }
-    @media (min-width: 440px) { body[data-menu="aus"] .sk-msg { max-width: 190px !important; transition: all 0.3s linear; font-size: 12px !important; } }
-    @media (min-width: 470px) { body[data-menu="aus"] .sk-msg { max-width: 210px !important; transition: all 0.3s linear; font-size: 13px !important; } }
-    @media (min-width: 510px) { body[data-menu="aus"] .sk-msg { max-width: 230px !important; transition: all 0.3s linear; font-size: 13px !important; } }
-    @media (min-width: 560px) { body[data-menu="aus"] .sk-msg { max-width: 250px !important; transition: all 0.3s linear; font-size: 14px !important; } }
-    @media (min-width: 610px) { body[data-menu="aus"] .sk-msg { max-width: 250px !important; transition: all 0.3s linear; font-size: 14px !important; } }
+    @media (min-width:   1px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 150px !important; transition: all 0.3s linear; font-size: 11px !important; } }
+    @media (min-width: 410px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 170px !important; transition: all 0.3s linear; font-size: 12px !important; } }
+    @media (min-width: 440px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 190px !important; transition: all 0.3s linear; font-size: 12px !important; } }
+    @media (min-width: 470px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 210px !important; transition: all 0.3s linear; font-size: 13px !important; } }
+    @media (min-width: 510px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 230px !important; transition: all 0.3s linear; font-size: 13px !important; } }
+    @media (min-width: 560px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 250px !important; transition: all 0.3s linear; font-size: 14px !important; } }
+    @media (min-width: 610px) { body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-msg { max-width: 250px !important; transition: all 0.3s linear; font-size: 14px !important; } }
     
-    body[data-menu="an"]  .sk-right-row .sk-msg { margin-right: 0%;  transition: all 0.3s linear; }
-    body[data-menu="aus"] .sk-right-row .sk-msg { margin-right: 40%; transition: all 0.3s linear; }
+    body[data-menu="an"]                             .sk-right-row .sk-msg { margin-right: 0%;  transition: all 0.3s linear; }
+ /* body[data-mobil="iphone"][data-menu="aus"]       .sk-right-row .sk-msg { margin-right: 84%; transition: all 0.3s linear; } */
+    body[data-menu="aus"]:not([data-mobil="iphone"]) .sk-right-row .sk-msg { margin-right: 42%; transition: all 0.3s linear; }
     
  /* ----------------- */
  /* Befehler */
@@ -528,7 +544,7 @@
     
     .befehle {
        display: none;
-       position: fixed; 
+       position: absolute; 
        z-index: 10001 !important;
        bottom: 17px; 
        left: 34px; 
@@ -566,7 +582,7 @@
        margin-left: 1px;
     }
     
-    #befehle {
+    #befehlleiste {
        display: none;
        position: absolute;
        z-index: 3002;
@@ -574,7 +590,7 @@
        right: 90px;
        border: 0px black solid;
     }
-    #befehle input {
+    #befehlleiste input {
        width: 20px;
        height: 20px;
        background-color: #dddddd;
@@ -589,7 +605,7 @@
       -ms-transition: background-color 500ms linear;
        transition: background-color 500ms linear;
     }
-    #befehle input.aktiv {
+    #befehlleiste input.aktiv {
        background-color: #00aeff;
       -webkit-transition: background-color 500ms linear;
       -moz-transition: background-color 500ms linear;
@@ -684,3 +700,11 @@
        min-height: 50%;
     }}
     
+    #datenFormular {
+    	position: absolute;
+    	right: 0px;
+    	bottom: 20px;
+    	left: 0px;
+    	height: 100px;
+    	text-align: center;
+    }

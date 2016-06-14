@@ -111,7 +111,8 @@
     
     function wachsen(inputId, breite) {
     
-       var min = 10, max = 300, pad_right = 0, input = document.getElementById(inputId);
+       var min = 10, max = 300, pad_right = 0;
+       var input = document.getElementById(inputId);
 
        input.style.width = breite+'px';
        input.onchange = input.onkeypress = input.onkeydown = input.onkeyup = function(){

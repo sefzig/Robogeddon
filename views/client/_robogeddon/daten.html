@@ -1,4 +1,9 @@
 
+        <div id="datenFormular">
+          <span id="namenEingeben"></span><br /><br />
+          <input type="text" class="vorname"  id="vornameDaten"  value="" onchange="$('#vornameMenu' ).attr('value', $(this).val());" style="width:  84px; margin-bottom: 5px;" /><script> wachsen("vornameDaten",   84); $("#vornameDaten" ).trigger("change"); </script><br />
+          <input type="text" class="nachname" id="nachnameDaten" value="" onchange="$('#nachnameMenu').attr('value', $(this).val());" style="width:  96px; margin-bottom: 5px;" /><script> wachsen("nachnameDaten",  96); $("#nachnameDaten").trigger("change"); </script>
+        </div>
         <div class="robogeddon">
           <h2>#ROBOGEDDON</h2>
           <div data-start="chat">
@@ -10,9 +15,6 @@
                   <input type="submit" value="Gespräch beginnen" /><br />
                 </td></tr>
                 <tr><td style="height: 100px;">
-                  <span id="namenEingeben"></span><br /><br />
-                  <input type="text" class="vorname"  id="vornameDaten"  value="" onchange="console.log($(this).val()); $('#vornameMenu' ).attr('value', $(this).val());" style="width:  84px; margin-bottom: 5px;" /><script> wachsen("vornameDaten",   84); $("#vornameDaten" ).trigger("change"); </script><br />
-                  <input type="text" class="nachname" id="nachnameDaten" value="" onchange="console.log($(this).val()); $('#nachnameMenu').attr('value', $(this).val());" style="width:  96px; margin-bottom: 5px;" /><script> wachsen("nachnameDaten",  96); $("#nachnameDaten").trigger("change"); </script>
                 </td></tr>
               </table>
             </div>
